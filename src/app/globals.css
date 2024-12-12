@@ -1,4 +1,9 @@
 :root {
+  /*  Breakpoints */
+  --breakpoint-desktop: 75rem;
+  --breakpoint-laptop: 48rem;
+  --breakpoint-mobile: 30rem;
+
   /* Background Colors */
   --bg-color-primary: #fdfdfd;
   --bg-color-secondary: #ebeeef;
