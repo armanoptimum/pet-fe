@@ -1,6 +1,30 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Colors */
+  --color-primary-dark-blue: #003459;
+  --color-primary-dark-blue-40: #0078cd;
+  --color-primary-dark-blue-60: #00528c;
+  --color-primary-dark-blue-80: #002a48;
+
+  /* Secondary Colors */
+  --color-secondary-mon-yellow: #f7dba7;
+  --color-secondary-mon-yellow-40: #fceed5;
+  --color-secondary-mon-yellow-60: #f1d092;
+  --color-secondary-mon-yellow-80: #eec77e;
+
+  /* State Colors */
+  --color-state-pink-red: #ff564f;
+  --color-state-green-light: #34c759;
+  --color-state-orange-shine: #ff912c;
+  --color-state-blue-sea: #00a7e7;
+
+  /* Neutral Colors */
+  --color-neutral-100: #00171f;
+  --color-neutral-80: #242b33;
+  --color-neutral-60: #667479;
+  --color-neutral-40: #99a2a5;
+  --color-neutral-20: #ccd1d2;
+  --color-neutral-10: #ebeeef;
+  --color-neutral-00: #ccd1d2;
 }
 
 html,
