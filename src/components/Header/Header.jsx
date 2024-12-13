@@ -11,6 +11,7 @@ import {
   ListItemSearchBarStyled,
   ListItemSearchBarInputStyled,
   RegionStyled,
+  RegionName
 } from './styles';
 import Button from '../shared/Button/Button';
 import { BUTTON_STYLES } from '../shared/Button/constants';
@@ -40,7 +41,7 @@ const Header = () => {
 
         <RegionStyled>
           <Image alt="button" src={regionImg} />
-          <p>VND</p>
+          <RegionName>VND</RegionName>
           <Image alt="button" src={arrowBottom} />
         </RegionStyled>
       </RightListBarStyled>

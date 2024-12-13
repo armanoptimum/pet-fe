@@ -54,3 +54,6 @@ export const RegionStyled = styled.div`
   gap: 0.25rem;
   padding: 0.5rem;
 `;
+
+export const RegionName = styled.p`
+`
