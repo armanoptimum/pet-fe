@@ -57,11 +57,10 @@
   /* Spacing */
   --spacing-main-horizontal: 8.125rem;
   --spacing-main-vertical: 1.875rem;
-  
+
   /* Border radius */
   --border-radius-primary: 3.563rem;
 }
-
 
 * {
   box-sizing: border-box;

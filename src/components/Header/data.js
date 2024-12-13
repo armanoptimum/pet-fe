@@ -1,6 +1,1 @@
-export const listItemData = [
-    'Home',
-    'Category',
-    'About',
-    'Contact',
-]
+export const listItemData = ['Home', 'Category', 'About', 'Contact'];

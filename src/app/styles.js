@@ -1,5 +1,4 @@
-'use client'
+'use client';
 import styled from 'styled-components';
 
-export const HomeStyled = styled.div`
-`;
+export const HomeStyled = styled.div``;
