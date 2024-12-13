@@ -32,9 +32,11 @@ export const ButtonStyled = styled.button`
   font-size: var(--font-size-body-medium);
   font-weight: var(--font-weight-medium);
   color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
   border: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
   ${({ $noText }) => ($noText ? ' padding: 0.75rem' : '')}
 `;
