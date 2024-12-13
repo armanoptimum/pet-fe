@@ -1,12 +1,12 @@
 :root {
   /*  Breakpoints */
-  --breakpoint-desktop: 75rem;
+  --breakpoint-desktop: 63rem;
   --breakpoint-laptop: 48rem;
   --breakpoint-mobile: 30rem;
 
-  /* Background Colors */
-  --bg-color-primary: #fdfdfd;
-  --bg-color-secondary: #ebeeef;
+  /* General Colors */
+  --color-primary: #fdfdfd;
+  --color-secondary: #ebeeef;
   --bg-color-disabled: #ccd1d2;
 
   /* Primary Colors */
@@ -34,7 +34,7 @@
   --color-neutral-40: #99a2a5;
   --color-neutral-20: #ccd1d2;
   --color-neutral-10: #ebeeef;
-  --color-neutral-00: #ccd1d2;
+  --color-neutral-00: #fdfdfd;
 
   /* Font Weights */
   --font-weight-bold: 700;
@@ -53,6 +53,13 @@
   --font-size-body-small: 0.75rem;
   --font-size-body-small-extra: 0.625rem;
   --font-size-body-small-extra-extra: 0.5rem;
+
+  /* Spacing */
+  --spacing-main-horizontal: 1rem;
+  --spacing-main-vertical: 0.813rem;
+
+  /* Border radius */
+  --border-radius-button-primary: 3.563rem;
 }
 
 html,
@@ -74,4 +81,15 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media (min-width: 63rem) {
+  :root {
+    --spacing-main-horizontal: 8.125rem;
+    --spacing-main-vertical: 1.875rem;
+  }
 }
