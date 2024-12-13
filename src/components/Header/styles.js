@@ -41,8 +41,10 @@ export const ListItemSearchBarStyled = styled.div`
 export const ListItemSearchBarInputStyled = styled.input`
   border: none;
   outline: none;
-  color: var(--color-neutral-40);
-
+  color: var(--color-neutral-100);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-body-medium);
+  
   &::placeholder {
     color: var(--color-neutral-40);
   }
