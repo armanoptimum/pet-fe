@@ -1,27 +1,41 @@
 import Image from 'next/image';
 import logo from '@/assets/icons/logo.svg';
-import { HeaderStyled, ListItemStyled, ListStyled } from './styles';
+import searchIcon from "@/assets/icons/search.svg"
+import regionImg from "@/assets/images/region.svg"
+import arrowBottom from "@/assets/icons/arrow-bottom-small.svg"
+import { HeaderStyled, LeftListBarStyled, RightListBarStyled,  ListItemStyled, ListItemSearchBarStyled, ListItemSearchBarInputStyled, RegionStyled } from './styles';
 import Button from '../shared/Button/Button';
 import { BUTTON_STYLES } from '../shared/Button/constants';
+import { listItemData } from './data';
 
 const Header = () => {
   return (
     <HeaderStyled>
-      <ListStyled>
+      <LeftListBarStyled>
         <ListItemStyled>
           <Image alt="logo" src={logo} priority />
         </ListItemStyled>
-        <ListItemStyled>Home</ListItemStyled>
-        <ListItemStyled>Category</ListItemStyled>
-        <ListItemStyled>About</ListItemStyled>
-        <ListItemStyled>Contact</ListItemStyled>
-      </ListStyled>
+        {listItemData.map(item =>  <ListItemStyled>{item}</ListItemStyled>)}
+      </LeftListBarStyled>
 
-      <ListStyled>
+      <RightListBarStyled>
+
+      <ListItemSearchBarStyled>
+            <Image alt="search" src={searchIcon} />
+            <ListItemSearchBarInputStyled type="text" placeholder="Search something here" />
+        </ListItemSearchBarStyled>
+
         <ListItemStyled>
           <Button style={BUTTON_STYLES.PRIMARY}>Join The Community</Button>
         </ListItemStyled>
-      </ListStyled>
+        
+        <RegionStyled>
+          <Image alt="button" src={regionImg} />
+          <p>VND</p>
+          <Image alt="button" src={arrowBottom} />
+        </RegionStyled>
+
+      </RightListBarStyled>
     </HeaderStyled>
   );
 };

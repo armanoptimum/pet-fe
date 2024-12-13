@@ -28,7 +28,7 @@ const buttonStyles = {
 export const ButtonStyled = styled.button`
   ${({ $style }) => buttonStyles[$style || 'primary']}
   padding: 1rem 2.813rem;
-  border-radius: var(--border-radius-button-primary);
+  border-radius: var(--border-radius-primary);
   font-size: var(--font-size-body-medium);
   font-weight: var(--font-weight-medium);
   color: var(--color-primary);
@@ -38,5 +38,6 @@ export const ButtonStyled = styled.button`
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  white-space: nowrap;
   ${({ $noText }) => ($noText ? ' padding: 0.75rem' : '')}
 `;

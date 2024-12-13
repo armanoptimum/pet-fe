@@ -55,27 +55,23 @@
   --font-size-body-small-extra-extra: 0.5rem;
 
   /* Spacing */
-  --spacing-main-horizontal: 1rem;
-  --spacing-main-vertical: 0.813rem;
-
+  --spacing-main-horizontal: 8.125rem;
+  --spacing-main-vertical: 1.875rem;
+  
   /* Border radius */
-  --border-radius-button-primary: 3.563rem;
+  --border-radius-primary: 3.563rem;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-secondary-mon-yellow);
 }
 
 a {
