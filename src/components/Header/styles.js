@@ -3,11 +3,10 @@ import styled from 'styled-components';
 
 export const HeaderStyled = styled.header`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 2.25rem;
   align-items: center;
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal);
-  /* border: 1px solid black; */
 `;
 
 export const LeftListBarStyled = styled.ul`
@@ -15,13 +14,21 @@ export const LeftListBarStyled = styled.ul`
   align-items: center;
   gap: 3rem;
   color: var(--color-primary-dark-blue);
+
+  @media (max-width: 60rem) {
+    display: none;
+  }
 `;
 
 export const RightListBarStyled = styled.ul`
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.875rem;
   color: var(--color-primary-dark-blue);
+
+  @media (min-width: 92rem) {
+    display: flex;
+  }
 `;
 
 export const ListItemStyled = styled.li`
@@ -44,7 +51,7 @@ export const ListItemSearchBarInputStyled = styled.input`
   color: var(--color-neutral-100);
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-body-medium);
-  
+
   &::placeholder {
     color: var(--color-neutral-40);
   }
@@ -57,5 +64,26 @@ export const RegionStyled = styled.div`
   padding: 0.5rem;
 `;
 
-export const RegionName = styled.p`
-`
+export const IconBars = styled.ul`
+  display: flex;
+  gap: 1.125rem;
+
+  @media (min-width: 92rem) {
+    display: none;
+  }
+
+  @media (max-width: 60rem) {
+    display: none;
+  }
+`;
+
+export const MobileBar = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: 60rem) {
+    display: none;
+  }
+`;
+export const RegionName = styled.p``;

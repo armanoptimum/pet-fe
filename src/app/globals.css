@@ -1,8 +1,8 @@
 :root {
   /*  Breakpoints */
-  --breakpoint-desktop: 63rem;
-  --breakpoint-laptop: 48rem;
-  --breakpoint-mobile: 30rem;
+  --breakpoint-desktop: 100rem;
+  --breakpoint-laptop: 92rem;
+  --breakpoint-mobile: 60rem;
 
   /* General Colors */
   --color-primary: #fdfdfd;
@@ -55,8 +55,8 @@
   --font-size-body-small-extra-extra: 0.5rem;
 
   /* Spacing */
-  --spacing-main-horizontal: 8.125rem;
-  --spacing-main-vertical: 1.875rem;
+  --spacing-main-horizontal: 0.625rem;
+  --spacing-main-vertical: 0.813rem;
 
   /* Border radius */
   --border-radius-primary: 3.563rem;
@@ -82,7 +82,7 @@ li {
   list-style-type: none;
 }
 
-@media (min-width: 63rem) {
+@media (min-width: 60rem) {
   :root {
     --spacing-main-horizontal: 8.125rem;
     --spacing-main-vertical: 1.875rem;
