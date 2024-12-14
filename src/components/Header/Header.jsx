@@ -23,8 +23,8 @@ const Header = () => {
   return (
     <HeaderStyled>
       <MobileBar>
-        {mobileList.map(({ src, alt }) => (
-          <Image alt={alt} src={src} />
+        {mobileList.map(({ src, alt }, id) => (
+          <Image key={id} alt={alt} src={src} />
         ))}
       </MobileBar>
 
@@ -32,8 +32,8 @@ const Header = () => {
         <ListItemStyled>
           <Image alt="logo" src={logo} priority />
         </ListItemStyled>
-        {listItemData.map((item) => (
-          <ListItemStyled>{item}</ListItemStyled>
+        {listItemData.map((item, id) => (
+          <ListItemStyled key={id}>{item}</ListItemStyled>
         ))}
       </LeftListBarStyled>
 
@@ -53,8 +53,8 @@ const Header = () => {
       </RightListBarStyled>
 
       <IconBars>
-        {iconList.map(({ src, alt }) => (
-          <Image alt={alt} src={src} />
+        {iconList.map(({ src, alt }, id) => (
+          <Image key={id} alt={alt} src={src} />
         ))}
       </IconBars>
     </HeaderStyled>
