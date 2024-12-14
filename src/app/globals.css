@@ -37,11 +37,13 @@
   --color-neutral-00: #fdfdfd;
 
   /* Font Weights */
+  --font-weight-bold-max: 800;
   --font-weight-bold: 700;
   --font-weight-medium: 500;
   --font-weight-regular: 400;
 
   /* Font Size Heading */
+  --font-size-heading-large-max: 3.75rem;
   --font-size-heading-large: 2.875rem;
   --font-size-heading-medium: 2.25rem;
   --font-size-heading-small: 1.75rem;
@@ -70,7 +72,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--color-secondary-mon-yellow);
+  background-color: var(--color-secondary-mon-yellow-40);
 }
 
 a {
