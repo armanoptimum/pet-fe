@@ -1,12 +1,13 @@
-import Navbar from './Navbar';
-import Banner from './Banner';
+'use client'
+import Navbar from '@/components/Navbar';
+import Banner from '@/components/Banner';
 import { HeaderStyled } from './styles';
 
 const Header = () => {
   return (
     <HeaderStyled>
       <Navbar />
-      <Banner />
+      <Banner  />
     </HeaderStyled>
   );
 };

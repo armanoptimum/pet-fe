@@ -15,10 +15,10 @@ import {
   ImageStyledSmall,
 } from './styles';
 
-const Banner = () => {
+const Banner = ({ reversed = false }) => {
   return (
     <BannerStyled>
-      <BannerContentStyled>
+      <BannerContentStyled $reversed={reversed}>
         <BannerHeaderStyled>One more friend</BannerHeaderStyled>
         <BannerSubHeaderStyled>Thousands more fun!</BannerSubHeaderStyled>
         <BannerParagraphStyled>
@@ -32,7 +32,7 @@ const Banner = () => {
           <Button style={'primary'}>Explore Now</Button>
         </BannerBtnsStyled>
       </BannerContentStyled>
-      <BannerImageContainerStyled>
+      <BannerImageContainerStyled $reversed={reversed}>
         <ImageStyledLarge alt="dog and human" src={bannerImg} />
         <ImageStyledSmall alt="dog and human" src={bannerImgSmall} />
       </BannerImageContainerStyled>

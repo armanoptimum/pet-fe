@@ -18,6 +18,7 @@ export const BannerStyled = styled.div`
 export const BannerContentStyled = styled.div`
   display: flex;
   flex-direction: column;
+  order: ${({ $reversed }) => $reversed ? 2 : 1};
 `;
 
 export const BannerHeaderStyled = styled.h1`
@@ -66,6 +67,7 @@ export const BannerImageContainerStyled = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+  order: ${({ $reversed }) => $reversed ? 1 : 2};
 
   @media (min-width: 71.875rem) {
     margin-top: -100px;
