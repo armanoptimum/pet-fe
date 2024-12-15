@@ -13,15 +13,11 @@ import {
   BannerImageContainerStyled,
   ImageStyledLarge,
   ImageStyledSmall,
-  BgBlockOneStyled,
-  BgBlockTwoStyled,
-  BgBlockForthStyled,
 } from './styles';
 
 const Banner = () => {
   return (
     <BannerStyled>
-      <BgBlockTwoStyled />
       <BannerContentStyled>
         <BannerHeaderStyled>One more friend</BannerHeaderStyled>
         <BannerSubHeaderStyled>Thousands more fun!</BannerSubHeaderStyled>
@@ -37,8 +33,6 @@ const Banner = () => {
         </BannerBtnsStyled>
       </BannerContentStyled>
       <BannerImageContainerStyled>
-        <BgBlockOneStyled />
-        <BgBlockForthStyled />
         <ImageStyledLarge alt="dog and human" src={bannerImg} />
         <ImageStyledSmall alt="dog and human" src={bannerImgSmall} />
       </BannerImageContainerStyled>

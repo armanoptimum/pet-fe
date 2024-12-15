@@ -18,7 +18,6 @@ export const BannerStyled = styled.div`
 export const BannerContentStyled = styled.div`
   display: flex;
   flex-direction: column;
-  z-index: 3;
 `;
 
 export const BannerHeaderStyled = styled.h1`
@@ -75,7 +74,6 @@ export const BannerImageContainerStyled = styled.div`
 `;
 
 export const ImageStyledLarge = styled(Image)`
-  z-index: 3;
   display: block;
 
   @media (max-width: 60rem) {
@@ -84,7 +82,6 @@ export const ImageStyledLarge = styled(Image)`
 `;
 
 export const ImageStyledSmall = styled(Image)`
-  z-index: 3;
   display: block;
 
   @media (min-width: 60rem) {
@@ -99,8 +96,8 @@ export const BgBlockOneStyled = styled.div`
   position: absolute;
   transform: rotate(19deg);
   border-radius: 6.188rem;
-  z-index: 2;
   top: 10rem;
+  overflow: hidden;
 `;
 
 export const BgBlockForthStyled = styled.div`
@@ -110,7 +107,6 @@ export const BgBlockForthStyled = styled.div`
   position: absolute;
   transform: rotate(5deg);
   border-radius: 6.188rem;
-  z-index: 1;
   top: 11rem;
   left: -1rem;
 `;
@@ -124,7 +120,6 @@ export const BgBlockTwoStyled = styled.div`
   top: -25rem;
   left: -13rem;
   border-radius: 6.188rem;
-  z-index: 1;
 
   @media (min-width: 60rem) {
     top: -31rem;
