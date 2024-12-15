@@ -1,19 +1,17 @@
 'use client';
-
 import styled from 'styled-components';
 
 export const BannerStyled = styled.div`
   display: flex;
   color: var(--color-primary-dark-blue-80);
+  justify-content: space-between;
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal) 0;
-  position: relative;
 `;
 
 export const BannerContentStyled = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-width: 30rem;
 `;
 
 export const BannerHeaderStyled = styled.h1`
@@ -32,6 +30,7 @@ export const BannerParagraphStyled = styled.p`
   font-weight: var(--font-weight-medium);
   margin-bottom: 2.1rem;
   line-height: 1.5rem;
+  max-width: 30rem;
 `;
 
 export const BannerBtnsStyled = styled.div`
@@ -41,5 +40,10 @@ export const BannerBtnsStyled = styled.div`
 
 export const BannerImageContainerStyled = styled.div`
   margin-top: -120px;
-  width: 30%;
+  margin-left: -210px;
+  margin-right: -90px;
+
+  @media (max-width: 92rem) {
+    margin-right: -300px;
+  }
 `;
