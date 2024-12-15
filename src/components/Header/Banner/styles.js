@@ -18,11 +18,6 @@ export const BannerStyled = styled.div`
 export const BannerContentStyled = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
-
-  @media (min-width: 31.25rem) {
-    align-items: center;
-  }
 `;
 
 export const BannerHeaderStyled = styled.h1`
@@ -49,10 +44,11 @@ export const BannerParagraphStyled = styled.p`
   font-weight: var(--font-weight-medium);
   margin-bottom: 2.1rem;
   line-height: 1.5rem;
-  max-width: 30rem;
+  max-width: 18rem;
 
   @media (min-width: 60rem) {
     font-size: var(--font-size-body-medium);
+    max-width: 30rem;
   }
 `;
 
