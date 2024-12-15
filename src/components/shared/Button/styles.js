@@ -28,7 +28,7 @@ const buttonStyles = {
 export const ButtonStyled = styled.button`
   ${({ $style }) => buttonStyles[$style || 'primary']}
 
-  padding: 1rem 2rem;
+  padding: 0.875rem 1.75rem;
   border-radius: var(--border-radius-primary);
   font-size: var(--font-size-body-medium);
   font-weight: var(--font-weight-medium);
