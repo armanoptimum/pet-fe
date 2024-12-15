@@ -1,6 +1,7 @@
 import Button from '@/components/shared/Button';
 import arrowRight from '@/assets/icons/btn-arrow-right-dark.svg';
 import bannerImg from '@/assets/images/bannerImg.svg';
+import bannerImgSmall from '@/assets/images/bannerImg-small.svg';
 
 import {
   BannerStyled,
@@ -10,8 +11,9 @@ import {
   BannerParagraphStyled,
   BannerBtnsStyled,
   BannerImageContainerStyled,
+  ImageStyledLarge,
+  ImageStyledSmall,
 } from './styles';
-import Image from 'next/image';
 
 const Banner = () => {
   return (
@@ -31,7 +33,8 @@ const Banner = () => {
         </BannerBtnsStyled>
       </BannerContentStyled>
       <BannerImageContainerStyled>
-        <Image alt="dog and human" src={bannerImg} />
+        <ImageStyledLarge alt="dog and human" src={bannerImg} />
+        <ImageStyledSmall alt="dog and human" src={bannerImgSmall} />
       </BannerImageContainerStyled>
     </BannerStyled>
   );

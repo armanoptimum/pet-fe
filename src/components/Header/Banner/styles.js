@@ -1,5 +1,6 @@
 'use client';
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export const BannerStyled = styled.div`
   display: flex;
@@ -72,5 +73,21 @@ export const BannerImageContainerStyled = styled.div`
   @media (min-width: 71.875rem) {
     margin-top: -100px;
     width: 40%;
+  }
+`;
+
+export const ImageStyledLarge = styled(Image)`
+  display: block;
+
+  @media (max-width: 60rem) {
+    display: none;
+  }
+`;
+
+export const ImageStyledSmall = styled(Image)`
+  display: block;
+
+  @media (min-width: 60rem) {
+    display: none;
   }
 `;
