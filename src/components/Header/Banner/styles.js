@@ -25,7 +25,7 @@ export const BannerContentStyled = styled.div`
 `;
 
 export const BannerHeaderStyled = styled.h1`
-  font-size: var(--font-size-heading-large);
+  font-size: var(--font-size-heading-medium);
   font-weight: var(--font-weight-bold-max);
 
   @media (min-width: 60rem) {
@@ -35,8 +35,7 @@ export const BannerHeaderStyled = styled.h1`
 `;
 
 export const BannerSubHeaderStyled = styled.h2`
-  font-size: var(--font-size-heading-small);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 
   @media (min-width: 60rem) {
     font-size: var(--font-size-heading-large);
@@ -58,7 +57,11 @@ export const BannerParagraphStyled = styled.p`
 
 export const BannerBtnsStyled = styled.div`
   display: flex;
-  gap: 1.25rem;
+  gap: 0.5rem;
+
+  @media (min-width: 60rem) {
+    gap: 1.25rem;
+  }
 `;
 
 export const BannerImageContainerStyled = styled.div`
