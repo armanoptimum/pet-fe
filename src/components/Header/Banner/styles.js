@@ -3,15 +3,23 @@ import styled from 'styled-components';
 
 export const BannerStyled = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: var(--color-primary-dark-blue-80);
-  justify-content: space-between;
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal) 0;
+
+
+  @media (min-width:  71.875rem) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 export const BannerContentStyled = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
 `;
 
 export const BannerHeaderStyled = styled.h1`
@@ -45,5 +53,10 @@ export const BannerImageContainerStyled = styled.div`
 
   @media (max-width: 92rem) {
     margin-right: -300px;
+  }
+
+
+  @media (min-width:  71.875rem) {
+   // margin: 0;
   }
 `;
