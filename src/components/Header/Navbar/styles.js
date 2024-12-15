@@ -7,6 +7,7 @@ export const NavbarStyled = styled.nav`
   gap: 2.25rem;
   align-items: center;
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal);
+  z-index: 5;
 `;
 
 export const LeftListBarStyled = styled.ul`

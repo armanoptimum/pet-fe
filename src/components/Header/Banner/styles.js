@@ -18,6 +18,7 @@ export const BannerStyled = styled.div`
 export const BannerContentStyled = styled.div`
   display: flex;
   flex-direction: column;
+  z-index: 3;
 `;
 
 export const BannerHeaderStyled = styled.h1`
@@ -62,6 +63,7 @@ export const BannerBtnsStyled = styled.div`
 `;
 
 export const BannerImageContainerStyled = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -73,6 +75,7 @@ export const BannerImageContainerStyled = styled.div`
 `;
 
 export const ImageStyledLarge = styled(Image)`
+  z-index: 3;
   display: block;
 
   @media (max-width: 60rem) {
@@ -81,9 +84,51 @@ export const ImageStyledLarge = styled(Image)`
 `;
 
 export const ImageStyledSmall = styled(Image)`
+  z-index: 3;
   display: block;
 
   @media (min-width: 60rem) {
     display: none;
+  }
+`;
+
+export const BgBlockOneStyled = styled.div`
+  width: 30rem;
+  background-color: var(--color-secondary-mon-yellow);
+  height: 40rem;
+  position: absolute;
+  transform: rotate(19deg);
+  border-radius: 6.188rem;
+  z-index: 2;
+  top: 10rem;
+`;
+
+export const BgBlockForthStyled = styled.div`
+  width: 30rem;
+  background-color: var(--color-primary-dark-blue);
+  height: 40rem;
+  position: absolute;
+  transform: rotate(5deg);
+  border-radius: 6.188rem;
+  z-index: 1;
+  top: 11rem;
+  left: -1rem;
+`;
+
+export const BgBlockTwoStyled = styled.div`
+  width: 10rem;
+  background-color: var(--color-secondary-mon-yellow);
+  height: 40rem;
+  position: absolute;
+  transform: rotate(110deg);
+  top: -25rem;
+  left: -13rem;
+  border-radius: 6.188rem;
+  z-index: 1;
+
+  @media (min-width: 60rem) {
+    top: -31rem;
+    left: -15rem;
+    width: 30rem;
   }
 `;
