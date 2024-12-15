@@ -8,8 +8,7 @@ export const BannerStyled = styled.div`
   color: var(--color-primary-dark-blue-80);
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal) 0;
 
-
-  @media (min-width:  71.875rem) {
+  @media (min-width: 71.875rem) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -18,27 +17,43 @@ export const BannerStyled = styled.div`
 export const BannerContentStyled = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
+  align-items: start;
+
+  @media (min-width: 31.25rem) {
+    align-items: center;
+  }
 `;
 
 export const BannerHeaderStyled = styled.h1`
-  font-size: var(--font-size-heading-large-max);
+  font-size: var(--font-size-heading-large);
   font-weight: var(--font-weight-bold-max);
+
+  @media (min-width: 60rem) {
+    gap: 5rem;
+    font-size: var(--font-size-heading-large-max);
+  }
 `;
 
 export const BannerSubHeaderStyled = styled.h2`
-  font-size: var(--font-size-heading-large);
+  font-size: var(--font-size-heading-small);
   margin-bottom: 1.5rem;
+
+  @media (min-width: 60rem) {
+    font-size: var(--font-size-heading-large);
+  }
 `;
 
 export const BannerParagraphStyled = styled.p`
   color: var(--color-neutral-80);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-body-small);
   font-weight: var(--font-weight-medium);
   margin-bottom: 2.1rem;
   line-height: 1.5rem;
   max-width: 30rem;
+
+  @media (min-width: 60rem) {
+    font-size: var(--font-size-body-medium);
+  }
 `;
 
 export const BannerBtnsStyled = styled.div`
@@ -47,16 +62,12 @@ export const BannerBtnsStyled = styled.div`
 `;
 
 export const BannerImageContainerStyled = styled.div`
-  margin-top: -120px;
-  margin-left: -210px;
-  margin-right: -90px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 
-  @media (max-width: 92rem) {
-    margin-right: -300px;
-  }
-
-
-  @media (min-width:  71.875rem) {
-   // margin: 0;
+  @media (min-width: 71.875rem) {
+    margin-top: -100px;
+    width: 40%;
   }
 `;
