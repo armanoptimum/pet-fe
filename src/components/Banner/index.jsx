@@ -13,11 +13,12 @@ import {
   BannerImageContainerStyled,
   ImageStyledLarge,
   ImageStyledSmall,
+  BgBlock,
 } from './styles';
 
-const Banner = ({ heading, subHeading, paragraph, imgLarge, imgSmall, reversed = false }) => {
+const Banner = ({ heading, subHeading, paragraph, imgLarge, imgSmall, reversed = false, style = 'primary' }) => {
   return (
-    <BannerStyled>
+    <BannerStyled $style={style}>
       <BannerContentStyled $reversed={reversed}>
         <BannerHeaderStyled>{heading}</BannerHeaderStyled>
         <BannerSubHeaderStyled>{subHeading}</BannerSubHeaderStyled>
@@ -29,7 +30,7 @@ const Banner = ({ heading, subHeading, paragraph, imgLarge, imgSmall, reversed =
           <Button style={'primary'}>Explore Now</Button>
         </BannerBtnsStyled>
       </BannerContentStyled>
-      <BannerImageContainerStyled $reversed={reversed}>
+      <BannerImageContainerStyled $style={style} $reversed={reversed}>
         <ImageStyledLarge alt="dog and human" src={imgLarge} priority />
         <ImageStyledSmall alt="dog and human" src={imgSmall} priority />
       </BannerImageContainerStyled>

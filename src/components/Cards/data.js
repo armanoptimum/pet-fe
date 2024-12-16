@@ -48,4 +48,48 @@ export const mockDogs = [
     ],
     price: '6.900.000',
   },
+  {
+    img: dog1Img,
+    name: 'MO231 - Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        value: 'Male',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog2Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        value: 'Male',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog3Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        value: 'Male',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog4Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        value: 'Male',
+      },
+    ],
+    price: '6.900.000',
+  },
 ];

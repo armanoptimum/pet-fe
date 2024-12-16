@@ -8,23 +8,41 @@ export const BannerStyled = styled.div`
   justify-content: center;
   color: var(--color-primary-dark-blue-80);
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal) 0;
+  gap: 2rem;
+  background-color: ${({ $style }) => ($style === 'primary' ? ' ' : 'var(--color-primary-dark-blue)')};
+
+  ${({ $style }) =>
+    $style === 'secondary' &&
+    `
+      background-color: var(--color-secondary-mon-yellow-40);
+      margin: var(--spacing-main-vertical) var(--spacing-main-horizontal);
+      border-radius: var(--border-radius-secondary);
+  `}
 
   @media (min-width: 71.875rem) {
     flex-direction: row;
     justify-content: space-between;
+    gap: 0;
   }
 `;
 
 export const BannerContentStyled = styled.div`
   display: flex;
   flex-direction: column;
-  order: ${({ $reversed }) => ($reversed ? 2 : 1)};
+  border-radius: var(--border-radius-secondary);
+
+  order: ${({ $reversed }) => ($reversed ? 1 : 2)};
+  @media (min-width: 71.875rem) {
+    align-items: center;
+    order: ${({ $reversed }) => ($reversed ? 2 : 1)};
+  }
 `;
 
 export const BannerHeaderStyled = styled.h1`
   font-size: var(--font-size-heading-medium);
   font-weight: var(--font-weight-bold-max);
-
+  width: 100%;
+  z-index: 3;
   @media (min-width: 60rem) {
     gap: 5rem;
     font-size: var(--font-size-heading-large-max);
@@ -33,7 +51,6 @@ export const BannerHeaderStyled = styled.h1`
 
 export const BannerSubHeaderStyled = styled.h2`
   margin-bottom: 1rem;
-
   @media (min-width: 60rem) {
     font-size: var(--font-size-heading-large);
   }
@@ -46,6 +63,7 @@ export const BannerParagraphStyled = styled.p`
   margin-bottom: 2.1rem;
   line-height: 1.5rem;
   max-width: 18rem;
+  z-index: 3;
 
   @media (min-width: 60rem) {
     font-size: var(--font-size-body-medium);
@@ -56,6 +74,7 @@ export const BannerParagraphStyled = styled.p`
 export const BannerBtnsStyled = styled.div`
   display: flex;
   gap: 0.5rem;
+  z-index: 3;
 
   @media (min-width: 60rem) {
     gap: 1.25rem;
@@ -67,10 +86,11 @@ export const BannerImageContainerStyled = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
+  z-index: 3;
   order: ${({ $reversed }) => ($reversed ? 1 : 2)};
 
   @media (min-width: 71.875rem) {
-    margin-top: -100px;
+    margin-top: ${({ $style }) => ($style === 'primary' ? '-100px' : '')};
     width: 40%;
   }
 `;
@@ -91,41 +111,14 @@ export const ImageStyledSmall = styled(Image)`
   }
 `;
 
-export const BgBlockOneStyled = styled.div`
-  width: 30rem;
-  background-color: var(--color-secondary-mon-yellow);
-  height: 40rem;
-  position: absolute;
-  transform: rotate(19deg);
-  border-radius: 6.188rem;
-  top: 10rem;
-  overflow: hidden;
-`;
-
-export const BgBlockForthStyled = styled.div`
-  width: 30rem;
-  background-color: var(--color-primary-dark-blue);
-  height: 40rem;
-  position: absolute;
-  transform: rotate(5deg);
-  border-radius: 6.188rem;
-  top: 11rem;
-  left: -1rem;
-`;
-
-export const BgBlockTwoStyled = styled.div`
-  width: 10rem;
-  background-color: var(--color-secondary-mon-yellow);
-  height: 40rem;
-  position: absolute;
-  transform: rotate(110deg);
-  top: -25rem;
-  left: -13rem;
-  border-radius: 6.188rem;
-
-  @media (min-width: 60rem) {
-    top: -31rem;
-    left: -15rem;
-    width: 30rem;
-  }
-`;
+// export const BgBlock = styled.div`
+//   display: ${({ $style }) => ($style === 'secondary' ? 'block' : 'none')};
+//   position: absolute;
+//   width: 40rem;
+//   height: 30rem;
+//   left: 0;
+//   top: -10rem;
+//   background-color: var(--color-secondary-mon-yellow-40);
+//   border-radius: var(--border-radius-primary);
+//   z-index: 1;
+// `

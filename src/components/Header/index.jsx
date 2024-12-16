@@ -2,13 +2,13 @@
 import Navbar from '@/components/Navbar';
 import Banner from '@/components/Banner';
 import { HeaderStyled } from './styles';
-import { bannerMock } from '../Banner/data';
+import { bannerOneMock } from '../Banner/data';
 
 const Header = () => {
   return (
     <HeaderStyled>
       <Navbar />
-      <Banner {...bannerMock} />
+      <Banner {...bannerOneMock} />
     </HeaderStyled>
   );
 };
