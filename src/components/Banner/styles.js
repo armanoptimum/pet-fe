@@ -9,8 +9,6 @@ export const BannerStyled = styled.div`
   color: var(--color-primary-dark-blue-80);
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal) 0;
   gap: 2rem;
-  background-color: ${({ $style }) => ($style === 'primary' ? ' ' : 'var(--color-primary-dark-blue)')};
-
   ${({ $style }) =>
     $style === 'secondary' &&
     `
@@ -33,7 +31,6 @@ export const BannerContentStyled = styled.div`
 
   order: ${({ $reversed }) => ($reversed ? 1 : 2)};
   @media (min-width: 71.875rem) {
-    align-items: center;
     order: ${({ $reversed }) => ($reversed ? 2 : 1)};
   }
 `;

@@ -55,19 +55,29 @@ export const CardsHeadingStyled = styled.h3`
 export const GiftBlockStyled = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.3rem;
   background-color: var(--color-secondary-mon-yellow);
-  padding: 0.5rem;
+  padding: 0.2rem;
   border-radius: 0.5rem;
+
+  @media (min-width: 60rem) {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
 `;
 
 export const GiftNameStyled = styled.p`
   color: var(--color-primary-dark-blue-80);
   font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body-small-extra);
+
+  @media (min-width: 60rem) {
+    font-size: var(--font-size-body-medium);
+  }
 `;
 export const GiftDot = styled.div`
-  width: 0.3rem;
-  height: 0.3rem;
+  min-width: 0.3rem;
+  min-height: 0.3rem;
   border-radius: 50%;
   background-color: var(--color-primary-dark-blue);
 `;
