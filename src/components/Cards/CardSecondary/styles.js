@@ -18,6 +18,17 @@ export const CardImageStyled = styled(Image)`
   border-radius: var(--border-radius-secondary);
 `;
 
+export const CardShtamp = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  border-radius: 1.75rem;
+  color: var(--color-neutral-00);
+  background-color: var(--color-state-blue-sea);
+  padding: 0.5rem;
+`;
+
 export const CardInfoStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,6 +36,7 @@ export const CardInfoStyled = styled.div`
   padding: 0.5rem 0.5rem 1.25rem 0.5rem;
   color: var(--color-neutral-100);
 `;
+
 export const CardNameStyled = styled.h5`
   font-size: var(--font-size-body-medium);
 `;

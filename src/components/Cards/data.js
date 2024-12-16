@@ -6,8 +6,8 @@ import product1Img from '@/assets/images/product1.svg';
 import product2Img from '@/assets/images/product2.svg';
 import product3Img from '@/assets/images/product3.svg';
 import product4Img from '@/assets/images/product4.svg';
-import dogSecondary1Img from '@/assets/images/dogSecondary1.svg';
-import dogSecondary2Img from '@/assets/images/dogSecondary2.svg';
+import dogSecondary1Img from '@/assets/images/dogSecondary3.svg';
+import dogSecondary2Img from '@/assets/images/dogSecondary3.svg';
 import dogSecondary3Img from '@/assets/images/dogSecondary3.svg';
 
 export const mockDogs = [
