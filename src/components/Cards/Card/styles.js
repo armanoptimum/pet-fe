@@ -30,7 +30,7 @@ export const CardImageStyled = styled(Image)`
 export const CardInfoStyled = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.7rem;
   padding: 0.5rem 0.5rem 1.25rem 0.5rem;
   color: var(--color-neutral-100);
 `;
