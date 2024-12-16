@@ -6,7 +6,7 @@ export const FooterStyled = styled.footer`
   flex-direction: column;
   gap: 2.5rem;
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal);
-  background-color: var(--color-secondary-mon-yellow);
+  background-color: var(--color-secondary-mon-yellow-40);
 `;
 
 export const SubscriptionBlockStyled = styled.div`
