@@ -11,15 +11,14 @@ import {
 import Button from '@/components/shared/Button';
 import arrowRight from '@/assets/icons/arrow-right-outline.svg';
 import Card from './Card';
-import { mockDogs } from './data';
 
-const Cards = () => {
+const Cards = ({ cardData, header, paragraph }) => {
   return (
     <CardsStyled>
       <CardsDetailStyled>
         <CardsHeaderStyled>
-          <CardsParagraph>Whats new?</CardsParagraph>
-          <CardsHeading>Take a look at some of our pets</CardsHeading>
+          <CardsParagraph>{header}</CardsParagraph>
+          <CardsHeading>{paragraph}</CardsHeading>
         </CardsHeaderStyled>
         <CardsButtonWrapperStyled>
           <Button style="outline" icon={arrowRight}>
@@ -28,7 +27,7 @@ const Cards = () => {
         </CardsButtonWrapperStyled>
       </CardsDetailStyled>
       <CardsWrapperStyled>
-        {mockDogs.map((data, id) => (
+        {cardData.map((data, id) => (
           <Card key={id} {...data} />
         ))}
       </CardsWrapperStyled>

@@ -14,7 +14,7 @@ import {
 } from './styles';
 import giftIcon from '@/assets/icons/gift.svg';
 
-const Card = ({ img, name = '', details = '', price = '', currency = 'VND', gift = '' }) => {
+const Card = ({ img, name = '', details = [], price = '', currency = 'VND', gift = '' }) => {
   return (
     <CardStyled>
       <CardImageStyled src={img} alt="dog" />
