@@ -14,10 +14,10 @@ import {
 } from './styles';
 import giftIcon from '@/assets/icons/gift.svg';
 
-const Card = ({ img, name = '', details = [], price = '', currency = 'VND', gift = '' }) => {
+const CardPrimary = ({ img, name = '', details = [], price = '', currency = 'VND', gift = '' }) => {
   return (
     <CardStyled>
-      <CardImageStyled src={img} alt="dog" />
+      <CardImageStyled src={img} alt="Card" />
       <CardInfoStyled>
         <CardNameStyled>{name}</CardNameStyled>
         <CardDetailsWrapperStyled>
@@ -42,4 +42,4 @@ const Card = ({ img, name = '', details = [], price = '', currency = 'VND', gift
   );
 };
 
-export default Card;
+export default CardPrimary;

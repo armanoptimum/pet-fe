@@ -1,34 +1,16 @@
-import {
-  CardsHeaderStyled,
-  CardsDetailStyled,
-  CardsHeading,
-  CardsParagraph,
-  CardsStyled,
-  CardsWrapperStyled,
-  CardsButtonWrapperStyled,
-} from './styled';
-import Button from '@/components/shared/Button';
-import arrowRight from '@/assets/icons/arrow-right-outline.svg';
-import Card from './Card';
+import { CardsStyled, CardsWrapperStyled } from './styled';
+import CardPrimary from './CardPrimary';
+import CardSecondary from './CardSecondary';
+import SectionHeader from '@/components/SectionHeader';
 
-const Cards = ({ cardData, header, paragraph }) => {
+const Cards = ({ cardData, type = 'primary', header, paragraph }) => {
   return (
     <CardsStyled>
-      <CardsDetailStyled>
-        <CardsHeaderStyled>
-          <CardsParagraph>{header}</CardsParagraph>
-          <CardsHeading>{paragraph}</CardsHeading>
-        </CardsHeaderStyled>
-        <CardsButtonWrapperStyled>
-          <Button style="outline" icon={arrowRight}>
-            View More
-          </Button>
-        </CardsButtonWrapperStyled>
-      </CardsDetailStyled>
-      <CardsWrapperStyled>
-        {cardData.map((data, id) => (
-          <Card key={id} {...data} />
-        ))}
+      <SectionHeader header={header} paragraph={paragraph} />
+      <CardsWrapperStyled $type={type}>
+        {cardData.map((data, id) =>
+          type === 'primary' ? <CardPrimary key={id} {...data} /> : <CardSecondary key={id} {...data} />
+        )}
       </CardsWrapperStyled>
     </CardsStyled>
   );
