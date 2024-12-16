@@ -6,6 +6,7 @@ import {
   CardsStyled,
   CardsWrapperStyled,
   CardsButtonWrapperStyled,
+  GiftBlockStyled,
 } from './styled';
 import Button from '@/components/shared/Button';
 import arrowRight from '@/assets/icons/arrow-right-outline.svg';
@@ -22,8 +23,7 @@ const Cards = () => {
         </CardsHeaderStyled>
         <CardsButtonWrapperStyled>
           <Button style="outline" icon={arrowRight}>
-            {' '}
-            View More{' '}
+            View More
           </Button>
         </CardsButtonWrapperStyled>
       </CardsDetailStyled>

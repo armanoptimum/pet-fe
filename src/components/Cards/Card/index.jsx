@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   CardStyled,
   CardImageStyled,
@@ -6,9 +7,14 @@ import {
   CardDetailStyled,
   CardPriceStyled,
   CardDetailsWrapperStyled,
+  GiftBlockStyled,
+  GiftNameStyled,
+  GiftImageStyled,
+  GiftDot,
 } from './styles';
+import giftIcon from '@/assets/icons/gift.svg';
 
-const Card = ({ img, name = '', details = '', price = '', currency = 'VND' }) => {
+const Card = ({ img, name = '', details = '', price = '', currency = 'VND', gift = '' }) => {
   return (
     <CardStyled>
       <CardImageStyled src={img} alt="dog" />
@@ -24,6 +30,13 @@ const Card = ({ img, name = '', details = '', price = '', currency = 'VND' }) =>
         <CardPriceStyled>
           {price}, {currency}
         </CardPriceStyled>
+        {gift && (
+          <GiftBlockStyled>
+            <GiftImageStyled alt="gift" src={giftIcon} />
+            <GiftDot />
+            <GiftNameStyled>{gift}</GiftNameStyled>
+          </GiftBlockStyled>
+        )}
       </CardInfoStyled>
     </CardStyled>
   );

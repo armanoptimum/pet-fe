@@ -32,6 +32,7 @@ export const CardInfoStyled = styled.div`
   flex-direction: column;
   gap: 0.4rem;
   padding: 0.5rem 0.5rem 1.25rem 0.5rem;
+  color: var(--color-neutral-100);
 `;
 export const CardNameStyled = styled.h5`
   font-size: var(--font-size-body-medium);
@@ -50,3 +51,24 @@ export const CardsHeadingStyled = styled.h3`
   color: var(--color-primary-dark-blue);
   font-size: var(--font-size-heading-small-extra);
 `;
+
+export const GiftBlockStyled = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-secondary-mon-yellow);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+`;
+
+export const GiftNameStyled = styled.p`
+  color: var(--color-primary-dark-blue-80);
+  font-weight: var(--font-weight-bold);
+`;
+export const GiftDot = styled.div`
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: var(--color-primary-dark-blue);
+`;
+export const GiftImageStyled = styled(Image)``;
