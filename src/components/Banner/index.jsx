@@ -15,16 +15,13 @@ import {
   ImageStyledSmall,
 } from './styles';
 
-const Banner = ({ reversed = false }) => {
+const Banner = ({ heading, subHeading, paragraph, imgLarge, imgSmall, reversed = false }) => {
   return (
     <BannerStyled>
       <BannerContentStyled $reversed={reversed}>
-        <BannerHeaderStyled>One more friend</BannerHeaderStyled>
-        <BannerSubHeaderStyled>Thousands more fun!</BannerSubHeaderStyled>
-        <BannerParagraphStyled>
-          Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We
-          have 200+ different pets that can meet your needs!
-        </BannerParagraphStyled>
+        <BannerHeaderStyled>{heading}</BannerHeaderStyled>
+        <BannerSubHeaderStyled>{subHeading}</BannerSubHeaderStyled>
+        <BannerParagraphStyled>{paragraph}</BannerParagraphStyled>
         <BannerBtnsStyled>
           <Button style={'outline'} icon={arrowRight}>
             View Intro
@@ -33,8 +30,8 @@ const Banner = ({ reversed = false }) => {
         </BannerBtnsStyled>
       </BannerContentStyled>
       <BannerImageContainerStyled $reversed={reversed}>
-        <ImageStyledLarge alt="dog and human" src={bannerImg} />
-        <ImageStyledSmall alt="dog and human" src={bannerImgSmall} />
+        <ImageStyledLarge alt="dog and human" src={imgLarge} priority />
+        <ImageStyledSmall alt="dog and human" src={imgSmall} priority />
       </BannerImageContainerStyled>
     </BannerStyled>
   );

@@ -7,6 +7,7 @@
   /* General Colors */
   --color-primary: #fdfdfd;
   --color-secondary: #ebeeef;
+  --bg-color-grey: #f6f6f6;
   --bg-color-disabled: #ccd1d2;
 
   /* Primary Colors */
@@ -50,8 +51,10 @@
   --font-size-heading-small-extra: 1.5rem;
 
   /* Font Size Body */
+
   --font-size-body-large: 1.25rem;
   --font-size-body-medium: 1rem;
+  --font-size-body-medium-s: 0.875rem;
   --font-size-body-small: 0.75rem;
   --font-size-body-small-extra: 0.625rem;
   --font-size-body-small-extra-extra: 0.5rem;
@@ -62,6 +65,7 @@
 
   /* Border radius */
   --border-radius-primary: 3.563rem;
+  --border-radius-secondary: 0.75rem;
 }
 
 * {
@@ -77,6 +81,7 @@ body {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color-grey);
 }
 
 a {
