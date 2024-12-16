@@ -6,6 +6,7 @@ import Cards from '@/components/Cards';
 import Banner from '@/components/Banner';
 import { mockDogs, mockDogsSecondary, mockProduct } from '@/components/Cards/data';
 import Sellers from '@/components/Sellers';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         paragraph="Useful pet knowledge"
         header="You already know ?"
       />
+      <Footer />
     </HomeStyled>
   );
 }
