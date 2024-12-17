@@ -5,7 +5,29 @@ import heartIcon from '@/assets/icons/heart.svg';
 import cartIcon from '@/assets/icons/cart.svg';
 import loopIcon from '@/assets/icons/loop.svg';
 
-export const listItemData = ['Home', 'Category', 'About', 'Contact'];
+export const listItemData = [
+
+{
+  item: 'Home',
+  href: '/'
+},
+
+{
+  item: 'Category',
+  href: 'category'
+},
+
+{
+  item: 'About',
+  href: 'about'
+},
+
+{
+  item: 'Contact',
+  href: 'contact'
+}
+
+]
 
 export const mobileList = [
   {

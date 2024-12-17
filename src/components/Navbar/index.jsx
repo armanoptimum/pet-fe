@@ -19,6 +19,7 @@ import {
 import Button from '@/components/shared/Button';
 import { BUTTON_STYLES } from '@/components//shared/Button/constants';
 import { iconList, listItemData, mobileList } from './data';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -33,8 +34,8 @@ const Navbar = () => {
         <ListItemStyled>
           <Image alt="logo" src={logo} priority />
         </ListItemStyled>
-        {listItemData.map((item, id) => (
-          <ListItemStyled key={id}>{item}</ListItemStyled>
+        {listItemData.map(({item, href}, id) => (
+          <ListItemStyled key={id}><Link href={href}>{item}</Link></ListItemStyled>
         ))}
       </LeftListBarStyled>
 

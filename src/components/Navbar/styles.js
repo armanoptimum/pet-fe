@@ -34,6 +34,7 @@ export const RightListBarStyled = styled.ul`
 export const ListItemStyled = styled.li`
   font-size: var(--font-size-body-medium);
   font-weight: var(--font-weight-bold);
+  cursor: pointer;
 `;
 
 export const ListItemSearchBarStyled = styled.div`
