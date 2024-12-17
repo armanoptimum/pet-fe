@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 
 export const PaginationStyled = styled.div`
@@ -7,10 +8,10 @@ export const PaginationStyled = styled.div`
   gap: 0.75rem;
 `;
 
-export const PageButton = styled.button`
+export const PaginationButtonStyled = styled.button`
   padding: 8px 12px;
-  background-color: transparent;
-  color: var(--color-primary-dark-blue);
+  background-color: ${({ $active }) => $active ? 'var(--color-primary-dark-blue)': 'transparent'};
+  color: ${({ $active }) => $active ? 'var(--color-neutral-00)': 'var(--color-primary-dark-blue);'}; 
   font-weight: var(--font-weight-bold);
   font-size: 20px;
   border: none;
@@ -25,8 +26,14 @@ export const PageButton = styled.button`
   }
 `;
 
-export const Ellipsis = styled.span`
+export const EllipsisStyled = styled.span`
   font-size: 14px;
   color: #999;
   padding: 0 8px;
 `;
+
+
+export const PaginationIconeStyled = styled(Image)`
+    cursor: pointer;
+`;
+

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PaginationStyled, PageButton, Ellipsis } from './styles';
+import { PaginationStyled, PaginationButtonStyled, EllipsisStyled, PaginationIconeStyled } from './styles';
 import pagiantionArrowLeft from '@/assets/icons/paginationArrowLeft.svg';
 import pagiantionArrowRight from '@/assets/icons/paginationArrowRight.svg';
 import Image from 'next/image';
@@ -31,23 +31,23 @@ const Pagination = ({ count }) => {
   const generateButtons = () => {
     const buttons = [];
     for (let i = currentPages.start; i <= currentPages.end; i++) {
-      buttons.push(<PageButton key={i}>{i}</PageButton>);
+      buttons.push(<PaginationButtonStyled $active={i === currentPages.start} key={i}>{i}</PaginationButtonStyled>);
     }
     return buttons;
   };
 
   return (
     <PaginationStyled>
-      <Image alt="prev" src={pagiantionArrowLeft} onClick={handlePrev} />
+      <PaginationIconeStyled alt="prev" src={pagiantionArrowLeft} onClick={handlePrev} />
       {generateButtons()}
       {currentPages.end !== count && (
         <>
-          <Ellipsis>...</Ellipsis>
-          <PageButton>{count}</PageButton>
+          <EllipsisStyled>...</EllipsisStyled>
+          <PaginationButtonStyled>{count}</PaginationButtonStyled>
         </>
       )}
 
-      <Image alt="next" src={pagiantionArrowRight} onClick={handleNext} />
+      <PaginationIconeStyled alt="next" src={pagiantionArrowRight} onClick={handleNext} />
     </PaginationStyled>
   );
 };
