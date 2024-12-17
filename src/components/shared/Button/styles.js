@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import styled, { css } from 'styled-components';
 import { BUTTON_STYLES } from './constants';

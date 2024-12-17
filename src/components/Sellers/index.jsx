@@ -28,7 +28,9 @@ const Sellers = () => {
         </SellersButtonWrapperStyled>
       </SellersHeaderStyled>
       <SellersContainerStyled>
-        {sellersList.map(({src, alt}, id) => <SellersImageStyled key={id} alt={alt} src={src} />)}
+        {sellersList.map(({ src, alt }, id) => (
+          <SellersImageStyled key={id} alt={alt} src={src} />
+        ))}
       </SellersContainerStyled>
     </SellersStyled>
   );

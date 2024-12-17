@@ -7,32 +7,32 @@ import seller6Img from '@/assets/images/seller6.svg';
 import seller7Img from '@/assets/images/seller7.svg';
 
 export const sellersList = [
-    {
-        src: seller1Img,
-        alt: 'Seller'
-    },
-    {
-        src: seller2Img,
-        alt: 'Seller'
-    },
-    {
-        src: seller3Img,
-        alt: 'Seller'
-    },
-    {
-        src: seller4Img,
-        alt: 'Seller'
-    },
-    {
-        src: seller5Img,
-        alt: 'Seller'
-    },
-    {
-        src: seller6Img,
-        alt: 'Seller'
-    },
-    {
-        src: seller7Img,
-        alt: 'Seller'
-    },
-]
+  {
+    src: seller1Img,
+    alt: 'Seller',
+  },
+  {
+    src: seller2Img,
+    alt: 'Seller',
+  },
+  {
+    src: seller3Img,
+    alt: 'Seller',
+  },
+  {
+    src: seller4Img,
+    alt: 'Seller',
+  },
+  {
+    src: seller5Img,
+    alt: 'Seller',
+  },
+  {
+    src: seller6Img,
+    alt: 'Seller',
+  },
+  {
+    src: seller7Img,
+    alt: 'Seller',
+  },
+];
