@@ -2,7 +2,7 @@ import dogSecondary1Img from '@/assets/images/dogSecondary3.svg';
 import dogSecondary2Img from '@/assets/images/dogSecondary3.svg';
 import dogSecondary3Img from '@/assets/images/dogSecondary3.svg';
 
-export const mockDogsSecond = [
+export const mock4 = [
   {
     img: dogSecondary1Img,
     header: 'What is a Pomeranian? How to Identify Pomeranian Dogs',

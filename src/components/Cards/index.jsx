@@ -5,6 +5,7 @@ import SectionHeader from '@/components/SectionHeader';
 import Pagination from '../Pagination';
 
 const Cards = ({ cardData, type = 'primary', header, paragraph, sectionType, pagination = 0, colCount = 4 }) => {
+  
   return (
     <CardsStyled>
       <SectionHeader header={header} paragraph={paragraph} type={sectionType} />

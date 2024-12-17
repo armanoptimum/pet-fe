@@ -1,31 +1,30 @@
-import { NextResponse } from 'next/server';
-import { mockDogs } from './db/dogsSecondData';
-import { mockDogsThird } from './db/dogThirdData';
-import { mockProductOne } from './db/productOneData';
+import { mock1 } from "./db/mock1";
+import { mock2 } from "./db/mock2";
+import { mock3 } from "./db/mock3";
+import { mock4 } from "./db/mock4";
 
 export async function GET(request) {
   const url = new URL(request.url);
   const type = url.searchParams.get('type');
-
-  let data;
+  let data = [];
 
   switch (type) {
-    case 'dogsFirst':
-      data = mockDogs;
+    case 'mock1':
+      data = mock1;
       break;
-    case 'dogsSecond':
-      data = mockDogsSecond;
+    case 'mock2':
+      data = mock2;
       break;
-    case 'secondaryDogs':
-      data = mockDogsThird;
+    case 'mock3':
+      data = mock3;
       break;
-    case 'products':
-      data = mockProductOne;
+    case 'mock4':
+      data = mock4;
       break;
     default:
       data = {};
       break;
   }
 
-  return NextResponse.status(200).json(data);
+  return Response.json(data);
 }

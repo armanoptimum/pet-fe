@@ -2,17 +2,26 @@ import { bannerOneMock, bannerThreeMock, bannerTwoMock } from '@/components/Bann
 import { HomeStyled } from './styles';
 import Cards from '@/components/Cards';
 import Banner from '@/components/Banner';
-import { mockDogs, mockDogsSecondary, mockProduct } from '@/components/Cards/data';
 import Sellers from '@/components/Sellers';
 
-export default function Home() {
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+
+export default async function Home() {
+  const [mock1, mock2, mock4] = await Promise.all([
+    fetch(`${baseUrl}?type=mock1`).then((res) => res.json()),
+    fetch(`${baseUrl}?type=mock2`).then((res) => res.json()),
+    fetch(`${baseUrl}?type=mock4`).then((res) => res.json()),
+  ]);
+
+
+
   return (
     <HomeStyled>
       <Banner {...bannerOneMock} />
-      <Cards cardData={mockDogs} paragraph="Take a look at some of our pets" header="Whats new?" colCount={4} />
+      <Cards cardData={mock1} paragraph="Take a look at some of our pets" header="Whats new?" colCount={4} />
       <Banner {...bannerTwoMock} reversed={true} style="secondary" />
       <Cards
-        cardData={mockProduct}
+        cardData={mock2}
         paragraph="Hard to choose right products for your pets?"
         header="Our Products"
         colCount={4}
@@ -21,7 +30,7 @@ export default function Home() {
       <Banner {...bannerThreeMock} style="secondary" />
       <Cards
         type="secondary"
-        cardData={mockDogsSecondary}
+        cardData={mock4}
         paragraph="Useful pet knowledge"
         header="You already know ?"
         colCount={3}
