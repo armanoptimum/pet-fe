@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import logo from '@/assets/icons/logo.svg';
 import searchIcon from '@/assets/icons/search.svg';
@@ -34,8 +34,10 @@ const Navbar = () => {
         <ListItemStyled>
           <Image alt="logo" src={logo} priority />
         </ListItemStyled>
-        {listItemData.map(({item, href}, id) => (
-          <ListItemStyled key={id}><Link href={href}>{item}</Link></ListItemStyled>
+        {listItemData.map(({ item, href }, id) => (
+          <ListItemStyled key={id}>
+            <Link href={href}>{item}</Link>
+          </ListItemStyled>
         ))}
       </LeftListBarStyled>
 

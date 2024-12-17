@@ -34,7 +34,8 @@ export const bannerThreeMock = {
 export const bannerFourMock = {
   heading: 'One more friend',
   subHeading: 'Thousands more fun!',
-  paragraph: 'Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!',
+  paragraph:
+    'Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!',
   imgLarge: bannerFour,
   imgSmall: bannerFourSmall,
 };

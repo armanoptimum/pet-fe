@@ -23,6 +23,13 @@ const buttonStyles = {
     color: var(--color-primary-dark-blue) !important;
     border: 2px solid !important;
   `,
+
+  [BUTTON_STYLES.SORT]: css`
+    background-color: transparent;
+    color: var(--color-primary-dark-blue) !important;
+    border: 2px solid !important;
+    padding: 0.5rem 1.75rem !important;
+  `,
 };
 
 export const ButtonStyled = styled.button`

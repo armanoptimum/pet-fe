@@ -8,7 +8,7 @@ import Sellers from '@/components/Sellers';
 
 export default function Home() {
   return (
-    <HomeStyled> 
+    <HomeStyled>
       <Banner {...bannerOneMock} />
       <Cards cardData={mockDogs} paragraph="Take a look at some of our pets" header="Whats new?" />
       <Banner {...bannerTwoMock} reversed={true} style="secondary" />

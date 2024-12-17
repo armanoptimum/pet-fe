@@ -7,20 +7,20 @@ export const SectionStyled = styled.div`
 
 export const SectionHeaderStyled = styled.div`
   display: flex;
-  flex-direction: ${({ $type }) => $type === 'primary' ? 'column' : 'row'};
-  align-items: ${({ $type }) => $type === 'primary' ? '' : 'center'};
+  flex-direction: ${({ $type }) => ($type === 'primary' ? 'column' : 'row')};
+  align-items: ${({ $type }) => ($type === 'primary' ? '' : 'center')};
   gap: 0.8rem;
 
-  ${({ $type }) => 
-    $type === 'secondary' && `
+  ${({ $type }) =>
+    $type === 'secondary' &&
+    `
       & > :nth-child(1) {
         order: 2;
       }
       & > :nth-child(2) {
         order: 1;
       }
-    `
-  }
+    `}
 `;
 
 export const SectionParagraph = styled.p``;

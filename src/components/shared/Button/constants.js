@@ -5,4 +5,5 @@ export const BUTTON_STYLES = {
   FORTH: 'forth',
   DISABLED: 'disabled',
   OUTLINE: 'outline',
+  SORT: 'sort',
 };

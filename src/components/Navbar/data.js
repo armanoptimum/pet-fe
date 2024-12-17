@@ -6,28 +6,26 @@ import cartIcon from '@/assets/icons/cart.svg';
 import loopIcon from '@/assets/icons/loop.svg';
 
 export const listItemData = [
+  {
+    item: 'Home',
+    href: '/',
+  },
 
-{
-  item: 'Home',
-  href: '/'
-},
+  {
+    item: 'Category',
+    href: 'category',
+  },
 
-{
-  item: 'Category',
-  href: 'category'
-},
+  {
+    item: 'About',
+    href: 'about',
+  },
 
-{
-  item: 'About',
-  href: 'about'
-},
-
-{
-  item: 'Contact',
-  href: 'contact'
-}
-
-]
+  {
+    item: 'Contact',
+    href: 'contact',
+  },
+];
 
 export const mobileList = [
   {

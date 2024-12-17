@@ -285,9 +285,6 @@ export const mockDogsSecondary = [
   },
 ];
 
-
-
-
 export const mockDogsTwo = [
   {
     img: dog1Img,
