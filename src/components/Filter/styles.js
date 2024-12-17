@@ -4,7 +4,7 @@ export const FilterStyled = styled.div`
   display: none;
   flex-direction: column;
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal);
-  margin-top: 3.75rem;
+  margin-top: 4.75rem;
   gap: 1.75rem;
 
   @media (min-width: 60rem) {
@@ -14,7 +14,7 @@ export const FilterStyled = styled.div`
 
 export const FilterNameStyled = styled.h3`
   color: var(--color-primary-dark-blue);
-  font-size: var(--font-size-body-large);
+  font-size: var(--font-size-heading-small-extra);
 `;
 
 export const FilterOptionsWrapper = styled.div`
