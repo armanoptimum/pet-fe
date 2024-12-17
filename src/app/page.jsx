@@ -13,9 +13,9 @@ export default async function Home() {
 
   try {
     const responses = await Promise.all([
-      fetch(`${baseUrl}?type=mock1`).then((res) => res.json()),
-      fetch(`${baseUrl}?type=mock2`).then((res) => res.json()),
-      fetch(`${baseUrl}?type=mock4`).then((res) => res.json()),
+      fetch(`${baseUrl}/api?type=mock1`).then((res) => res.json()),
+      fetch(`${baseUrl}/api?type=mock2`).then((res) => res.json()),
+      fetch(`${baseUrl}/api?type=mock4`).then((res) => res.json()),
     ]);
     [mock1, mock2, mock4] = responses;
   } catch (err) {
