@@ -19,7 +19,7 @@ const Category = () => {
           paragraph="Small Dog"
           header="52 puppies"
           sectionType="secondary"
-          colCount={3}
+          colCount={4}
         />
       </CategoryContentWrapperStyled>
     </CategoryStyled>
