@@ -16,6 +16,6 @@ export const CardsWrapperStyled = styled.div`
   height: 100%;
 
   @media (min-width: 100rem) {
-    grid-template-columns: ${({ $type }) => ($type === 'primary' ? 'repeat(4, 1fr)' : 'repeat(3, 1fr);')};
+    grid-template-columns: ${({ $colCount }) => `repeat(${$colCount}, 1fr)`};
   }
 `;
