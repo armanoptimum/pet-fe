@@ -1,11 +1,11 @@
-import { NextResponse } from "next/server";
-import { mockDogs } from "./db/dogsSecondData";
-import { mockDogsThird } from "./db/dogThirdData";
-import { mockProductOne } from "./db/productOneData";
+import { NextResponse } from 'next/server';
+import { mockDogs } from './db/dogsSecondData';
+import { mockDogsThird } from './db/dogThirdData';
+import { mockProductOne } from './db/productOneData';
 
 export async function GET(request) {
   const url = new URL(request.url);
-  const type = url.searchParams.get('type'); 
+  const type = url.searchParams.get('type');
 
   let data;
 
@@ -13,12 +13,12 @@ export async function GET(request) {
     case 'dogsFirst':
       data = mockDogs;
       break;
-      case 'dogsSecond':
-        data = mockDogsSecond
-        break;
-      case 'secondaryDogs':
-        data = mockDogsThird;
-        break;
+    case 'dogsSecond':
+      data = mockDogsSecond;
+      break;
+    case 'secondaryDogs':
+      data = mockDogsThird;
+      break;
     case 'products':
       data = mockProductOne;
       break;

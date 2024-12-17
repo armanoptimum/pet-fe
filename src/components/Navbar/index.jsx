@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import logo from '@/assets/icons/logo.svg';
 import searchIcon from '@/assets/icons/search.svg';

@@ -1,4 +1,3 @@
-'use client';
 import { bannerOneMock, bannerThreeMock, bannerTwoMock } from '@/components/Banner/data';
 import { HomeStyled } from './styles';
 import Cards from '@/components/Cards';
