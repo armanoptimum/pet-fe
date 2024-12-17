@@ -1,20 +1,22 @@
 import arrowRight from '@/assets/icons/arrow-right-outline.svg';
-import { CardsDetailStyled, CardsHeaderStyled, CardsParagraph, CardsHeading, CardsButtonWrapperStyled } from './styles';
+import arrowBottom from '@/assets/icons/arrow-bottom.svg';
+import { SectionStyled, SectionHeaderStyled, SectionParagraph, SectionHeading, SectionButtonWrapperStyled } from './styles';
 import Button from '@/components/shared/Button';
+import { buttonText } from './data';
 
-const SectionHeader = ({ header, paragraph }) => {
+const SectionHeader = ({ header, paragraph, type = 'primary'}) => {
   return (
-    <CardsDetailStyled>
-      <CardsHeaderStyled>
-        <CardsParagraph>{header}</CardsParagraph>
-        <CardsHeading>{paragraph}</CardsHeading>
-      </CardsHeaderStyled>
-      <CardsButtonWrapperStyled>
-        <Button style="outline" icon={arrowRight}>
-          View More
+    <SectionStyled>
+      <SectionHeaderStyled $type={type}>
+        <SectionParagraph>{header}</SectionParagraph>
+        <SectionHeading>{paragraph}</SectionHeading>
+      </SectionHeaderStyled>
+      <SectionButtonWrapperStyled>
+        <Button style="outline" icon={type === 'primary' ? arrowRight : arrowBottom}>
+          {buttonText[type]}
         </Button>
-      </CardsButtonWrapperStyled>
-    </CardsDetailStyled>
+      </SectionButtonWrapperStyled>
+    </SectionStyled>
   );
 };
 

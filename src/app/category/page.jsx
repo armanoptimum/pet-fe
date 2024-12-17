@@ -9,7 +9,7 @@ const Category = () => {
   return (
     <div>
         <Banner {...bannerFourMock} style="secondary" reversed />
-        <Cards cardData={mockDogsTwo} paragraph="Take a look at some of our pets" header="Whats new?" />
+        <Cards cardData={mockDogsTwo} paragraph="Small Dog" header="52 puppies" sectionType='secondary' />
     </div>
   )
 }

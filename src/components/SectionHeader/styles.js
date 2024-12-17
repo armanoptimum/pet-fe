@@ -1,19 +1,31 @@
 import styled from 'styled-components';
 
-export const CardsDetailStyled = styled.div`
+export const SectionStyled = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
-export const CardsHeaderStyled = styled.div`
+export const SectionHeaderStyled = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: ${({ $type }) => $type === 'primary' ? 'column' : 'row'};
+  align-items: ${({ $type }) => $type === 'primary' ? '' : 'center'};
+  gap: 0.8rem;
+
+  ${({ $type }) => 
+    $type === 'secondary' && `
+      & > :nth-child(1) {
+        order: 2;
+      }
+      & > :nth-child(2) {
+        order: 1;
+      }
+    `
+  }
 `;
 
-export const CardsParagraph = styled.p``;
+export const SectionParagraph = styled.p``;
 
-export const CardsHeading = styled.h3`
+export const SectionHeading = styled.h3`
   color: var(--color-primary-dark-blue);
   font-size: var(--font-size-body-large);
 
@@ -22,7 +34,7 @@ export const CardsHeading = styled.h3`
   }
 `;
 
-export const CardsButtonWrapperStyled = styled.div`
+export const SectionButtonWrapperStyled = styled.div`
   display: none;
 
   @media (min-width: 60rem) {
