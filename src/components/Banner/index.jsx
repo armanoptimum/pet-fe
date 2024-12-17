@@ -1,8 +1,5 @@
 import Button from '@/components/shared/Button';
 import arrowRight from '@/assets/icons/btn-arrow-right-dark.svg';
-import bannerImg from '@/assets/images/bannerImg.svg';
-import bannerImgSmall from '@/assets/images/bannerImg-small.svg';
-
 import {
   BannerStyled,
   BannerContentStyled,
@@ -13,7 +10,6 @@ import {
   BannerImageContainerStyled,
   ImageStyledLarge,
   ImageStyledSmall,
-  BgBlock,
 } from './styles';
 
 const Banner = ({ heading, subHeading, paragraph, imgLarge, imgSmall, reversed = false, style = 'primary' }) => {
