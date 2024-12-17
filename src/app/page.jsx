@@ -5,13 +5,10 @@ import Cards from '@/components/Cards';
 import Banner from '@/components/Banner';
 import { mockDogs, mockDogsSecondary, mockProduct } from '@/components/Cards/data';
 import Sellers from '@/components/Sellers';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 
 export default function Home() {
   return (
-    <HomeStyled>
-      <Navbar />
+    <HomeStyled> 
       <Banner {...bannerOneMock} />
       <Cards cardData={mockDogs} paragraph="Take a look at some of our pets" header="Whats new?" />
       <Banner {...bannerTwoMock} reversed={true} style="secondary" />
@@ -24,7 +21,6 @@ export default function Home() {
         paragraph="Useful pet knowledge"
         header="You already know ?"
       />
-      <Footer />
     </HomeStyled>
   );
 }
