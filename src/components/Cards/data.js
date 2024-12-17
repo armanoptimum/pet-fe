@@ -19,6 +19,10 @@ export const mockDogs = [
         key: 'Gene',
         val: 'Male',
       },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
     ],
     price: '6.900.000',
   },
@@ -29,6 +33,10 @@ export const mockDogs = [
       {
         key: 'Gene',
         val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
       },
     ],
     price: '6.900.000',
@@ -41,6 +49,10 @@ export const mockDogs = [
         key: 'Gene',
         val: 'Male',
       },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
     ],
     price: '6.900.000',
   },
@@ -51,6 +63,10 @@ export const mockDogs = [
       {
         key: 'Gene',
         val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
       },
     ],
     price: '6.900.000',
@@ -63,6 +79,10 @@ export const mockDogs = [
         key: 'Gene',
         val: 'Male',
       },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
     ],
     price: '6.900.000',
   },
@@ -73,6 +93,10 @@ export const mockDogs = [
       {
         key: 'Gene',
         val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
       },
     ],
     price: '6.900.000',
@@ -85,6 +109,10 @@ export const mockDogs = [
         key: 'Gene',
         val: 'Male',
       },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
     ],
     price: '6.900.000',
   },
@@ -95,6 +123,10 @@ export const mockDogs = [
       {
         key: 'Gene',
         val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
       },
     ],
     price: '6.900.000',
