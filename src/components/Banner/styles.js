@@ -17,7 +17,7 @@ export const BannerStyled = styled.div`
       border-radius: var(--border-radius-secondary);
   `}
 
-  @media (min-width: 71.875rem) {
+  @media (min-width:90rem) {
     flex-direction: row;
     justify-content: space-between;
     gap: 0;
@@ -28,10 +28,11 @@ export const BannerContentStyled = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius-secondary);
-
   order: ${({ $reversed }) => ($reversed ? 1 : 2)};
-  @media (min-width: 71.875rem) {
+
+  @media (min-width: 90rem) {
     order: ${({ $reversed }) => ($reversed ? 2 : 1)};
+    padding: 1rem 0;
   }
 `;
 
@@ -88,7 +89,6 @@ export const BannerImageContainerStyled = styled.div`
 
   @media (min-width: 71.875rem) {
     margin-top: ${({ $style }) => ($style === 'primary' ? '-3rem' : '')};
-    width: 40%;
   }
 `;
 
