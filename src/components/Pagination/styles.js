@@ -10,8 +10,8 @@ export const PaginationStyled = styled.div`
 
 export const PaginationButtonStyled = styled.button`
   padding: 8px 12px;
-  background-color: ${({ $active }) => $active ? 'var(--color-primary-dark-blue)': 'transparent'};
-  color: ${({ $active }) => $active ? 'var(--color-neutral-00)': 'var(--color-primary-dark-blue);'}; 
+  background-color: ${({ $active }) => ($active ? 'var(--color-primary-dark-blue)' : 'transparent')};
+  color: ${({ $active }) => ($active ? 'var(--color-neutral-00)' : 'var(--color-primary-dark-blue);')};
   font-weight: var(--font-weight-bold);
   font-size: 20px;
   border: none;
@@ -32,8 +32,6 @@ export const EllipsisStyled = styled.span`
   padding: 0 8px;
 `;
 
-
 export const PaginationIconeStyled = styled(Image)`
-    cursor: pointer;
+  cursor: pointer;
 `;
-

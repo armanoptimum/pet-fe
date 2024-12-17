@@ -13,7 +13,7 @@ const Cards = ({ cardData, type = 'primary', header, paragraph, sectionType, pag
           type === 'primary' ? <CardPrimary key={id} {...data} /> : <CardSecondary key={id} {...data} />
         )}
       </CardsWrapperStyled>
-      {pagination && <Pagination count={pagination} />}
+      {pagination !== 0 && <Pagination count={pagination} />}
     </CardsStyled>
   );
 };
