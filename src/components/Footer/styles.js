@@ -80,9 +80,13 @@ export const FooterNavbarStyled = styled.nav`
 export const FooterNavItemTextWrapperStyled = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 3.75rem;
+  gap: 2rem;
   color: var(--color-neutral-100);
   font-size: var(--font-size-body-medium);
+
+  @media (min-width: 92rem) {
+    gap: 3.75rem;
+  }
 `;
 
 export const FooterNavItemIconWrapperStyled = styled.ul`
