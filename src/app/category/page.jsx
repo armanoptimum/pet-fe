@@ -10,7 +10,7 @@ const Category = () => {
   return (
     <CategoryStyled>
       <Banner {...bannerFourMock} style="secondary" reversed />
-      <Cards cardData={mockDogsTwo} paragraph="Small Dog" header="52 puppies" sectionType="secondary" />
+      <Cards pagination={50} cardData={mockDogsTwo} paragraph="Small Dog" header="52 puppies" sectionType="secondary" />
     </CategoryStyled>
   );
 };
