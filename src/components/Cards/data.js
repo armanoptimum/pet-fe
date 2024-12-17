@@ -284,3 +284,369 @@ export const mockDogsSecondary = [
       'Dog bites are common during development. However, no one wants to see their furniture or important items being bitten by a dog.',
   },
 ];
+
+
+
+
+export const mockDogsTwo = [
+  {
+    img: dog1Img,
+    name: 'MO231 - Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog2Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog3Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog4Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog1Img,
+    name: 'MO231 - Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog2Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog3Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog4Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog1Img,
+    name: 'MO231 - Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog2Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog3Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog4Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog1Img,
+    name: 'MO231 - Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog2Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog3Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog4Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog1Img,
+    name: 'MO231 - Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog2Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog3Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog4Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog1Img,
+    name: 'MO231 - Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog2Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog3Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+  {
+    img: dog4Img,
+    name: 'Pamerian white',
+    details: [
+      {
+        key: 'Gene',
+        val: 'Male',
+      },
+      {
+        key: 'Age',
+        val: '02 Months',
+      },
+    ],
+    price: '6.900.000',
+  },
+];
