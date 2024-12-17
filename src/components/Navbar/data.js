@@ -18,12 +18,12 @@ export const listItemData = [
 
   {
     item: 'About',
-    href: 'about',
+    href: '#',
   },
 
   {
     item: 'Contact',
-    href: 'contact',
+    href: '#',
   },
 ];
 
