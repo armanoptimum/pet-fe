@@ -5,11 +5,15 @@ import React from 'react';
 import { CategoryContentWrapperStyled, CategoryStyled } from './styles';
 import Filter from '@/components/Filter';
 
-
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 const Category = async () => {
-  const mock3 = await fetch(`${baseUrl}?type=mock3`).then((res) => res.json())
+  let mock3 = [];
+  try {
+    mock3 = (await fetch(`${baseUrl}?type=mock3`).then((res) => res.json())) || [];
+  } catch (err) {
+    console.error(err);
+  }
   return (
     <CategoryStyled>
       <Banner {...bannerFourMock} style="secondary" reversed />

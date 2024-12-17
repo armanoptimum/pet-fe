@@ -1,7 +1,7 @@
-import { mock1 } from "./db/mock1";
-import { mock2 } from "./db/mock2";
-import { mock3 } from "./db/mock3";
-import { mock4 } from "./db/mock4";
+import { mock1 } from './db/mock1';
+import { mock2 } from './db/mock2';
+import { mock3 } from './db/mock3';
+import { mock4 } from './db/mock4';
 
 export async function GET(request) {
   const url = new URL(request.url);
