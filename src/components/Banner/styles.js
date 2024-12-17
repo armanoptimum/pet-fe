@@ -8,11 +8,11 @@ export const BannerStyled = styled.div`
   justify-content: center;
   color: var(--color-primary-dark-blue-80);
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal) 0;
+  background-color: var(--color-secondary-mon-yellow-40);
   gap: 2rem;
   ${({ $style }) =>
     $style === 'secondary' &&
     `
-      background-color: var(--color-secondary-mon-yellow-40);
       margin: var(--spacing-main-vertical) var(--spacing-main-horizontal);
       border-radius: var(--border-radius-secondary);
   `}
@@ -87,7 +87,7 @@ export const BannerImageContainerStyled = styled.div`
   order: ${({ $reversed }) => ($reversed ? 1 : 2)};
 
   @media (min-width: 71.875rem) {
-    margin-top: ${({ $style }) => ($style === 'primary' ? '-100px' : '')};
+    margin-top: ${({ $style }) => ($style === 'primary' ? '-3rem' : '')};
     width: 40%;
   }
 `;
@@ -107,15 +107,3 @@ export const ImageStyledSmall = styled(Image)`
     display: none;
   }
 `;
-
-// export const BgBlock = styled.div`
-//   display: ${({ $style }) => ($style === 'secondary' ? 'block' : 'none')};
-//   position: absolute;
-//   width: 40rem;
-//   height: 30rem;
-//   left: 0;
-//   top: -10rem;
-//   background-color: var(--color-secondary-mon-yellow-40);
-//   border-radius: var(--border-radius-primary);
-//   z-index: 1;
-// `

@@ -6,6 +6,7 @@ export const NavbarStyled = styled.nav`
   gap: 2.25rem;
   align-items: center;
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal);
+  background-color: var(--color-secondary-mon-yellow-40);
 `;
 
 export const LeftListBarStyled = styled.ul`
