@@ -10,7 +10,6 @@ const ITEMS_PER_PAGE = 15;
 
 const fetchPageData = async (type, page) => {
   const res = await fetch(`${baseUrl}/api?type=${type}&page=${page}&limit=${ITEMS_PER_PAGE}`);
-  if (!res.ok) throw new Error(`Failed to fetch data for page ${page}`);
   const { data, total } = await res.json(); 
   return { data, total };
 };
