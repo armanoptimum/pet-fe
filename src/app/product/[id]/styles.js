@@ -4,8 +4,13 @@ import styled from 'styled-components';
 
 export const ProductStyled = styled.div`
   display: flex;
+  flex-direction: column;
   padding: var(--spacing-main-vertical) var(--spacing-main-horizontal);
   gap: 2.125rem;
+
+  @media (min-width: 90rem) {
+    flex-direction: row;
+  }
 `;
 
 export const ImagesWrapperStyled = styled.div`
@@ -15,6 +20,14 @@ export const ImagesWrapperStyled = styled.div`
 
 export const ImageWrapperStyled = styled(Image)`
   border-radius: 1rem;
+  height: 26.25rem;
+  width: 26.25rem;
+
+  @media (min-width: 90rem) {
+    flex-direction: row;
+    height: 37.5rem;
+    width: 37.5rem;
+  }
 `;
 
 export const SkuStyled = styled.p`
@@ -60,7 +73,11 @@ export const InformationListStyled = styled.ul`
 `;
 
 export const InformationItemStyled = styled.li`
-  min-width: 20rem;
+  width: 100%;
   color: var(--color-neutral-40);
   font-size: var(--font-size-body-medium);
+
+  @media (min-width: 90rem) {
+    min-width: 20rem;
+  }
 `;
