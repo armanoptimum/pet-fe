@@ -1,10 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PaginationStyled, PaginationButtonStyled, EllipsisStyled, PaginationIconeStyled } from './styles';
 import pagiantionArrowLeft from '@/assets/icons/paginationArrowLeft.svg';
 import pagiantionArrowRight from '@/assets/icons/paginationArrowRight.svg';
+import { useRouter } from 'next/navigation';
 
 const Pagination = ({ count }) => {
+  const router = useRouter();
   const [currentPages, setCurrentPages] = useState({
     start: 1,
     end: Math.min(4, count),
@@ -14,25 +16,34 @@ const Pagination = ({ count }) => {
   const handlePageClick = (e) => {
     const value = +e.target.innerText;
     setActivePage(value);
+    router.push(`?page=${value}`);
   };
 
   const handleNext = () => {
     if (currentPages.end < count) {
-      setCurrentPages((prev) => ({
-        start: prev.start + 1,
-        end: Math.min(prev.end + 1, count),
-      }));
-      setActivePage((prev) => prev + 1);
+      const newStart = currentPages.start + 1;
+      const newEnd = Math.min(currentPages.end + 1, count);
+
+      setCurrentPages({
+        start: newStart,
+        end: newEnd,
+      });
+      setActivePage((prev) => Math.min(prev + 1, count));
+      router.push(`?page=${activePage + 1}`);
     }
   };
 
   const handlePrev = () => {
     if (currentPages.start > 1) {
-      setCurrentPages((prev) => ({
-        start: prev.start - 1,
-        end: prev.end - 1,
-      }));
-      setActivePage((prev) => prev - 1);
+      const newStart = currentPages.start - 1;
+      const newEnd = currentPages.end - 1;
+
+      setCurrentPages({
+        start: newStart,
+        end: newEnd,
+      });
+      setActivePage((prev) => Math.max(prev - 1, 1));
+      router.push(`?page=${activePage - 1}`, undefined, { scroll: false });
     }
   };
 
@@ -60,7 +71,6 @@ const Pagination = ({ count }) => {
           </PaginationButtonStyled>
         </>
       )}
-
       <PaginationIconeStyled alt="next" src={pagiantionArrowRight} onClick={handleNext} />
     </PaginationStyled>
   );
