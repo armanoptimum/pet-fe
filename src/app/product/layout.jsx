@@ -11,7 +11,6 @@ const fetchPageData = async (type) => {
 };
 
 const ProductLayout = async ({ children }) => {
-  
   const mock = await fetchPageData('mock1');
   return (
     <ProductWrapperSyled>

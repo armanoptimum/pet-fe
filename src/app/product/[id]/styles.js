@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import styled from 'styled-components';
 
 export const ProductStyled = styled.div`
@@ -7,9 +8,13 @@ export const ProductStyled = styled.div`
   gap: 2.125rem;
 `;
 
-export const ImageWrapperStyled = styled.div`
+export const ImagesWrapperStyled = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const ImageWrapperStyled = styled(Image)`
+  border-radius: 1rem;
 `;
 
 export const SkuStyled = styled.p`
@@ -55,7 +60,7 @@ export const InformationListStyled = styled.ul`
 `;
 
 export const InformationItemStyled = styled.li`
-min-width: 20rem;
+  min-width: 20rem;
   color: var(--color-neutral-40);
   font-size: var(--font-size-body-medium);
 `;

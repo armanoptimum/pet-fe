@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   CardStyled,
   CardImageStyled,
@@ -13,31 +14,33 @@ import {
 } from './styles';
 import giftIcon from '@/assets/icons/gift.svg';
 
-const CardPrimary = ({ img, name = '', details = [], price = '', currency = 'VND', gift = '' }) => {
+const CardPrimary = ({ id, img, name = '', details = [], price = '', currency = 'VND', gift = '' }) => {
   return (
-    <CardStyled>
-      <CardImageStyled src={img} alt="Card" />
-      <CardInfoStyled>
-        <CardNameStyled>{name}</CardNameStyled>
-        <CardDetailsWrapperStyled>
-          {details.map(({ key, val }, id) => (
-            <CardDetailStyled key={id}>
-              {key} <strong>{val}</strong>
-            </CardDetailStyled>
-          ))}
-        </CardDetailsWrapperStyled>
-        <CardPriceStyled>
-          {price}, {currency}
-        </CardPriceStyled>
-        {gift && (
-          <GiftBlockStyled>
-            <GiftImageStyled alt="gift" src={giftIcon} />
-            <GiftDot />
-            <GiftNameStyled>{gift}</GiftNameStyled>
-          </GiftBlockStyled>
-        )}
-      </CardInfoStyled>
-    </CardStyled>
+    <Link href={`/product/${id}`}>
+      <CardStyled>
+        <CardImageStyled src={img} alt="Card" />
+        <CardInfoStyled>
+          <CardNameStyled>{name}</CardNameStyled>
+          <CardDetailsWrapperStyled>
+            {details.map(({ key, val }, id) => (
+              <CardDetailStyled key={id}>
+                {key} <strong>{val}</strong>
+              </CardDetailStyled>
+            ))}
+          </CardDetailsWrapperStyled>
+          <CardPriceStyled>
+            {price}, {currency}
+          </CardPriceStyled>
+          {gift && (
+            <GiftBlockStyled>
+              <GiftImageStyled alt="gift" src={giftIcon} />
+              <GiftDot />
+              <GiftNameStyled>{gift}</GiftNameStyled>
+            </GiftBlockStyled>
+          )}
+        </CardInfoStyled>
+      </CardStyled>
+    </Link>
   );
 };
 

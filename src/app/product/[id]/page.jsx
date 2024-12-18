@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   ContentWrapperStyled,
-  ImageWrapperStyled,
+  ImagesWrapperStyled,
   ProductStyled,
   NameStyled,
   PriceStyled,
@@ -10,49 +10,42 @@ import {
   InformationBlockStyled,
   InformationListStyled,
   InformationItemStyled,
+  ImageWrapperStyled,
 } from './styles';
-import detailImg from '@/assets/images/detail.svg';
 import Image from 'next/image';
 import Button from '@/components/shared/Button';
 import { BUTTON_STYLES } from '@/components/shared/Button/constants';
 import chatIcon from '@/assets/icons/chatIcon.svg';
 
-const sku = 'SKU #10000'
-const name = 'Shibu'
-const price = '34.000.000 VND'
+const sku = 'SKU #10000';
+const name = 'Shibu';
+const price = '34.000.000 VND';
 
-const info = {
-  sku: "1000000",
-  gender: 'female',
-  age: 20,
-  size: 'small',
-  color: 'red',
-  vaccinated: 'yes',
-  dewormed: 'yes',
-  cert: 'yes',
-  microchip: 'yes',
-  location: 'vietnam',
-  publish: '23-10-9',
-  addintional: `Pure breed Shih Tzu.
-  Good body structure.
-  With MKA cert and Microchip.
-  Father from champion lineage.`
-}
+const fetchData = async (id) => {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/product/${id}`);
+    return await res.json();
+  } catch (e) {
+    console.error(e);
+  }
+  return [];
+};
 
 const Product = async ({ params }) => {
-  const { id } = await params; 
-  console.log(id)
+  const { id } = await params;
+  const data = await fetchData(id);
+  if (data.length === 0) return <div>Not found</div>;
 
   return (
     <ProductStyled>
-      <ImageWrapperStyled>
-        <Image alt="detail image" src={detailImg} />
-      </ImageWrapperStyled>
+      <ImagesWrapperStyled>
+        <ImageWrapperStyled width={600} height={600} alt="detail image" src={data.img} />
+      </ImagesWrapperStyled>
 
       <ContentWrapperStyled>
-        <SkuStyled>{sku}</SkuStyled>
-        <NameStyled>{name}</NameStyled>
-        <PriceStyled>{price}</PriceStyled>
+        <SkuStyled>{data.info.sku}</SkuStyled>
+        <NameStyled>{data.name}</NameStyled>
+        <PriceStyled>{data.price}</PriceStyled>
         <ButtonsWrapperStyled>
           <Button>Contact Us</Button>
           <Button style={BUTTON_STYLES.OUTLINE} icon={chatIcon}>
@@ -60,7 +53,7 @@ const Product = async ({ params }) => {
           </Button>
         </ButtonsWrapperStyled>
         <InformationBlockStyled>
-          {Object.entries(info).map(([key, value]) => (
+          {Object.entries(data.info).map(([key, value]) => (
             <InformationListStyled key={key}>
               <InformationItemStyled>{key}</InformationItemStyled>
               <InformationItemStyled>{value}</InformationItemStyled>

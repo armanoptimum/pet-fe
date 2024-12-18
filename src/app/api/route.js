@@ -8,7 +8,7 @@ export async function GET(request) {
   let data = [];
 
   const url = new URL(request.url);
-  
+
   const id = url.searchParams.get('id');
   const type = url.searchParams.get('type');
   const page = parseInt(url.searchParams.get('page'), 10) || 1;
@@ -35,7 +35,7 @@ export async function GET(request) {
       data = mock4;
       break;
     default:
-      return new Response(JSON.stringify({ error: 'Invalid type' }), { status: 400 });
+      data = mock1;
   }
 
   if (id) {
