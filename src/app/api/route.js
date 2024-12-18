@@ -6,10 +6,7 @@ import { filterByPrice, filterByBreed, filterByColor, filterByGender } from './u
 
 export async function GET(request) {
   let data = [];
-
   const url = new URL(request.url);
-
-  const id = url.searchParams.get('id');
   const type = url.searchParams.get('type');
   const page = parseInt(url.searchParams.get('page'), 10) || 1;
   const limit = parseInt(url.searchParams.get('limit'), 10) || 15;
@@ -37,15 +34,7 @@ export async function GET(request) {
     default:
       data = mock1;
   }
-
-  if (id) {
-    const item = data.find((item) => item.id === id);
-    if (!item) {
-      return new Response(JSON.stringify({ error: 'Item not found' }), { status: 404 });
-    }
-    return new Response(JSON.stringify(item), { headers: { 'Content-Type': 'application/json' } });
-  }
-
+  
   data = filterByGender(data, genders);
   data = filterByColor(data, colors);
   data = filterByBreed(data, breeds);
