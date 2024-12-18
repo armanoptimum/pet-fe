@@ -11,12 +11,12 @@ export const CardsStyled = styled.div`
 
 export const CardsWrapperStyled = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: ${({ $colCountMin }) => `repeat(${$colCountMin}, 1fr)`};
   gap: 1.25rem;
   width: 100%;
   height: 100%;
 
   @media (min-width: 100rem) {
-    grid-template-columns: ${({ $colCount }) => `repeat(${$colCount}, 1fr)`};
+    grid-template-columns: ${({ $colCountMax }) => `repeat(${$colCountMax}, 1fr)`};
   }
 `;

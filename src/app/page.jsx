@@ -25,13 +25,13 @@ export default async function Home() {
   return (
     <HomeStyled>
       <Banner {...bannerOneMock} />
-      <Cards cardData={mock1} paragraph="Take a look at some of our pets" header="What's new?" colCount={4} />
+      <Cards cardData={mock1} paragraph="Take a look at some of our pets" header="What's new?" colCountMax={4} />
       <Banner {...bannerTwoMock} reversed={true} style="secondary" />
       <Cards
         cardData={mock2}
         paragraph="Hard to choose the right products for your pets?"
         header="Our Products"
-        colCount={4}
+        colCountMax={4}
       />
       <Sellers />
       <Banner {...bannerThreeMock} style="secondary" />
@@ -40,7 +40,8 @@ export default async function Home() {
         cardData={mock4}
         paragraph="Useful pet knowledge"
         header="Did you already know?"
-        colCount={3}
+        colCountMax={3}
+        colCountMin={1}
       />
     </HomeStyled>
   );
