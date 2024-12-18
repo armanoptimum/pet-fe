@@ -4,7 +4,16 @@ import CardSecondary from './CardSecondary';
 import SectionHeader from '@/components/SectionHeader';
 import Pagination from '../Pagination';
 
-const Cards = ({ cardData, type = 'primary', header, paragraph, sectionType, pagination = 0, colCountMax = 4, colCountMin = 2 }) => {
+const Cards = ({
+  cardData,
+  type = 'primary',
+  header,
+  paragraph,
+  sectionType,
+  pagination = 0,
+  colCountMax = 4,
+  colCountMin = 2,
+}) => {
   return (
     <CardsStyled>
       <SectionHeader header={header} paragraph={paragraph} type={sectionType} />

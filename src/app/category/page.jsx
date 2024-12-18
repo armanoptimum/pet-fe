@@ -10,13 +10,13 @@ const ITEMS_PER_PAGE = 16;
 
 const fetchPageData = async (type, page) => {
   const res = await fetch(`${baseUrl}/api?type=${type}&page=${page}&limit=${ITEMS_PER_PAGE}`);
-  const { data, total } = await res.json(); 
+  const { data, total } = await res.json();
   return { data, total };
 };
-     
+
 const Category = async ({ searchParams }) => {
   const params = await searchParams;
-  const page = params.page
+  const page = params.page;
   const { data, total } = await fetchPageData('mock3', page);
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
 

@@ -9,7 +9,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 const fetchPageData = async (type) => {
   const res = await fetch(`${baseUrl}/api?type=${type}`);
   if (!res.ok) throw new Error(`Failed to fetch data for page ${page}`);
-  const { data, total } = await res.json(); 
+  const { data, total } = await res.json();
   return { data, total };
 };
 
@@ -19,12 +19,7 @@ export default async function Home() {
   let mock4 = { data: [], total: 0 };
 
   try {
-    const responses = await Promise.all([
-      fetchPageData('mock1'),
-      fetchPageData('mock2'),
-      fetchPageData('mock4')
-             
-    ]);
+    const responses = await Promise.all([fetchPageData('mock1'), fetchPageData('mock2'), fetchPageData('mock4')]);
     [mock1, mock2, mock4] = responses;
   } catch (err) {
     console.error('Error fetching data:', err);

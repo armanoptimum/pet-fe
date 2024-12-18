@@ -7,7 +7,7 @@ export async function GET(request) {
   const url = new URL(request.url);
   const type = url.searchParams.get('type');
   const page = parseInt(url.searchParams.get('page'), 10) || 1;
-  const limit = parseInt(url.searchParams.get('limit'), 10) || 15; 
+  const limit = parseInt(url.searchParams.get('limit'), 10) || 15;
 
   let data = [];
 
@@ -35,7 +35,7 @@ export async function GET(request) {
   return new Response(
     JSON.stringify({
       data: paginatedData,
-      total: data.length, 
+      total: data.length,
     }),
     { headers: { 'Content-Type': 'application/json' } }
   );
