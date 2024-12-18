@@ -25,7 +25,7 @@ export const mock3 = [
     details: [
       {
         key: 'Gene',
-        val: 'Male',
+        val: 'Female',
       },
       {
         key: 'Age',
@@ -40,7 +40,7 @@ export const mock3 = [
     details: [
       {
         key: 'Gene',
-        val: 'Male',
+        val: 'Female',
       },
       {
         key: 'Age',
@@ -70,7 +70,7 @@ export const mock3 = [
     details: [
       {
         key: 'Gene',
-        val: 'Male',
+        val: 'Female',
       },
       {
         key: 'Age',

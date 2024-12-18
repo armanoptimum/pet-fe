@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { PaginationStyled, PaginationButtonStyled, EllipsisStyled, PaginationIconeStyled } from './styles';
 import pagiantionArrowLeft from '@/assets/icons/paginationArrowLeft.svg';
 import pagiantionArrowRight from '@/assets/icons/paginationArrowRight.svg';
@@ -16,7 +16,10 @@ const Pagination = ({ count }) => {
   const handlePageClick = (e) => {
     const value = +e.target.innerText;
     setActivePage(value);
-    router.push(`?page=${value}`);
+
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.set('page', value);
+    router.push(newUrl.toString());
   };
 
   const handleNext = () => {
@@ -29,7 +32,10 @@ const Pagination = ({ count }) => {
         end: newEnd,
       });
       setActivePage((prev) => Math.min(prev + 1, count));
-      router.push(`?page=${activePage + 1}`);
+
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set('page', activePage + 1);
+      router.push(newUrl.toString());
     }
   };
 
@@ -43,7 +49,10 @@ const Pagination = ({ count }) => {
         end: newEnd,
       });
       setActivePage((prev) => Math.max(prev - 1, 1));
-      router.push(`?page=${activePage - 1}`, undefined, { scroll: false });
+
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set('page', activePage - 1);
+      router.push(newUrl.toString(), undefined, { scroll: false });
     }
   };
 
