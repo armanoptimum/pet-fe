@@ -17,6 +17,7 @@ const CheckboxFilter = ({ data, children }) => {
   const [selectedOptions, setSelectedOptions] = useState({
     gender: [],
     color: [],
+    breed: [],
   });
 
   const handleCheckboxChange = (value) => {
@@ -35,13 +36,46 @@ const CheckboxFilter = ({ data, children }) => {
   };
 
   useEffect(() => {
-    let queryString = '';
-    if (selectedOptions.gender.length) {
-      queryString = `?gender=${selectedOptions.gender.map((option) => encodeURIComponent(option)).join('&gender=')}`;
-    } else if (selectedOptions.color.length) {
-      queryString = `?color=${selectedOptions.color.map((option) => encodeURIComponent(option)).join('&color=')}`;
-    }
-    router.push(`${queryString}`);
+    const { gender, color, breed } = selectedOptions;
+    const currentQuery = new URLSearchParams(window.location.search);
+
+    gender.forEach((option) => {
+      if (!currentQuery.getAll('gender').includes(option)) {
+        currentQuery.append('gender', option);
+      }
+    });
+
+    currentQuery.getAll('gender').forEach((option) => {
+      if (!gender.includes(option)) {
+        currentQuery.delete('gender', option);
+      }
+    });
+
+    color.forEach((option) => {
+      if (!currentQuery.getAll('color').includes(option)) {
+        currentQuery.append('color', option);
+      }
+    });
+
+    currentQuery.getAll('color').forEach((option) => {
+      if (!color.includes(option)) {
+        currentQuery.delete('color', option);
+      }
+    });
+
+    breed.forEach((option) => {
+      if (!currentQuery.getAll('breed').includes(option)) {
+        currentQuery.append('breed', option);
+      }
+    });
+
+    currentQuery.getAll('breed').forEach((option) => {
+      if (!breed.includes(option)) {
+        currentQuery.delete('breed', option);
+      }
+    });
+
+    router.push(`?${currentQuery.toString()}`);
   }, [selectedOptions, children, router]);
 
   return (

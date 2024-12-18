@@ -18,7 +18,9 @@ export const mock3 = [
       },
     ],
     price: '6.900.000',
+    color: 'red',
   },
+
   {
     img: dog3Img,
     name: 'Pamerian white',
@@ -33,6 +35,7 @@ export const mock3 = [
       },
     ],
     price: '6.900.000',
+    color: 'apricot',
   },
   {
     img: dog1Img,
@@ -48,6 +51,7 @@ export const mock3 = [
       },
     ],
     price: '6.900.000',
+    color: 'apricot',
   },
   {
     img: dog4Img,
@@ -63,6 +67,7 @@ export const mock3 = [
       },
     ],
     price: '6.900.000',
+    color: 'red',
   },
   {
     img: dog2Img,
@@ -78,6 +83,7 @@ export const mock3 = [
       },
     ],
     price: '6.900.000',
+    color: 'red',
   },
   {
     img: dog3Img,
@@ -93,6 +99,7 @@ export const mock3 = [
       },
     ],
     price: '6.900.000',
+    color: 'red',
   },
   {
     img: dog1Img,
@@ -108,6 +115,8 @@ export const mock3 = [
       },
     ],
     price: '7.000.000',
+    color: 'red',
+    breed: 'small',
   },
   {
     img: dog4Img,
@@ -123,6 +132,8 @@ export const mock3 = [
       },
     ],
     price: '7.200.000',
+    color: 'red',
+    breed: 'medium',
   },
   {
     img: dog2Img,
@@ -138,6 +149,7 @@ export const mock3 = [
       },
     ],
     price: '7.300.000',
+    breed: 'small',
   },
   {
     img: dog3Img,
@@ -153,6 +165,7 @@ export const mock3 = [
       },
     ],
     price: '7.500.000',
+    breed: 'large',
   },
   {
     img: dog1Img,

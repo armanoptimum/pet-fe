@@ -6,3 +6,17 @@ export const filterByGender = (data, genders) => {
   }
   return data;
 };
+
+export const filterByColor = (data, colors) => {
+  if (colors.length > 0 && colors[0] !== '') {
+    data = data.filter((item) => colors.includes(item.color));
+  }
+  return data;
+};
+
+export const filterByBreed = (data, breeds) => {
+  if (breeds.length > 0 && breeds[0] !== '') {
+    data = data.filter((item) => breeds.includes(item.breed));
+  }
+  return data;
+};
