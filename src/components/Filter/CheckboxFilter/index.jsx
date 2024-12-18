@@ -75,7 +75,7 @@ const CheckboxFilter = ({ data, children }) => {
       }
     });
 
-    router.push(`?${currentQuery.toString()}`);
+    router.push(`?${currentQuery.toString()}`, { scroll: false });
   }, [selectedOptions, children, router]);
 
   return (

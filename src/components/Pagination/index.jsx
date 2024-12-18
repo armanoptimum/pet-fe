@@ -19,7 +19,7 @@ const Pagination = ({ count }) => {
 
     const newUrl = new URL(window.location.href);
     newUrl.searchParams.set('page', value);
-    router.push(newUrl.toString());
+    router.push(newUrl.toString(), { scroll: false });
   };
 
   const handleNext = () => {
@@ -35,7 +35,7 @@ const Pagination = ({ count }) => {
 
       const newUrl = new URL(window.location.href);
       newUrl.searchParams.set('page', activePage + 1);
-      router.push(newUrl.toString());
+      router.push(newUrl.toString(), { scroll: false });
     }
   };
 
@@ -52,7 +52,7 @@ const Pagination = ({ count }) => {
 
       const newUrl = new URL(window.location.href);
       newUrl.searchParams.set('page', activePage - 1);
-      router.push(newUrl.toString(), undefined, { scroll: false });
+      router.push(newUrl.toString(), { scroll: false });
     }
   };
 

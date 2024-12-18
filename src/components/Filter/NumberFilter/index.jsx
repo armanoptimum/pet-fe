@@ -34,7 +34,7 @@ const NumberFilter = ({ children }) => {
       currentQuery.delete('max');
     }
 
-    router.push(`?${currentQuery.toString()}`);
+    router.push(`?${currentQuery.toString()}`, { scroll: false });
   }, [range, router]);
 
   return (
