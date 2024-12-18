@@ -6,24 +6,29 @@ import { CategoryContentWrapperStyled, CategoryStyled } from './styles';
 import Filter from '@/components/Filter';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const ITEMS_PER_PAGE = 15;
 
-const Category = async () => {
-  let mock3 = [];
-  try {
-    mock3 = (await fetch(`${baseUrl}/api?type=mock3`).then((res) => res.json())) || [];
-  } catch (err) {
-    console.error(err);
-  }
+const fetchPageData = async (type, page) => {
+  const res = await fetch(`${baseUrl}/api?type=${type}&page=${page}&limit=${ITEMS_PER_PAGE}`);
+  if (!res.ok) throw new Error(`Failed to fetch data for page ${page}`);
+  const { data, total } = await res.json(); 
+  return { data, total };
+};
+     
+const Category = async ({ page }) => {
+  const { data, total } = await fetchPageData('mock3');
+  const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
+
   return (
     <CategoryStyled>
       <Banner {...bannerFourMock} style="secondary" reversed />
       <CategoryContentWrapperStyled>
         <Filter />
         <Cards
-          pagination={50}
-          cardData={mock3}
+          pagination={totalPages}
+          cardData={data}
           paragraph="Small Dog"
-          header="52 puppies"
+          header={`${total} puppies`}
           sectionType="secondary"
           colCount={4}
         />

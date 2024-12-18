@@ -6,6 +6,9 @@ import { mock4 } from './db/mock4';
 export async function GET(request) {
   const url = new URL(request.url);
   const type = url.searchParams.get('type');
+  const page = parseInt(url.searchParams.get('page'), 10) || 1;
+  const limit = parseInt(url.searchParams.get('limit'), 10) || 15; 
+
   let data = [];
 
   switch (type) {
@@ -22,9 +25,18 @@ export async function GET(request) {
       data = mock4;
       break;
     default:
-      data = {};
-      break;
+      return new Response(JSON.stringify({ error: 'Invalid type' }), { status: 400 });
   }
 
-  return Response.json(data);
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
+  const paginatedData = data.slice(startIndex, endIndex);
+
+  return new Response(
+    JSON.stringify({
+      data: paginatedData,
+      total: data.length, 
+    }),
+    { headers: { 'Content-Type': 'application/json' } }
+  );
 }
