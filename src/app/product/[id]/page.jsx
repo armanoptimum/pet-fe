@@ -12,14 +12,9 @@ import {
   InformationItemStyled,
   ImageWrapperStyled,
 } from './styles';
-import Image from 'next/image';
 import Button from '@/components/shared/Button';
 import { BUTTON_STYLES } from '@/components/shared/Button/constants';
 import chatIcon from '@/assets/icons/chatIcon.svg';
-
-const sku = 'SKU #10000';
-const name = 'Shibu';
-const price = '34.000.000 VND';
 
 const fetchData = async (id) => {
   try {

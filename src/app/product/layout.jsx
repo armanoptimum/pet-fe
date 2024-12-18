@@ -14,7 +14,7 @@ const ProductLayout = async ({ children }) => {
   const mock = await fetchPageData('mock1');
   return (
     <ProductWrapperSyled>
-      <span>{children}</span>
+      <div>{children}</div>
       <Cards cardData={mock.data} paragraph="Our Lovely Customer" colCountMax={4} />
       <Cards cardData={mock.data} paragraph="Take a look at some of our pets" header="What's new?" colCountMax={4} />
     </ProductWrapperSyled>
