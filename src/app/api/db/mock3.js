@@ -150,6 +150,7 @@ export const mock3 = [
     ],
     price: '7.300.000',
     breed: 'small',
+    age: 30,
   },
   {
     img: dog3Img,
@@ -166,6 +167,7 @@ export const mock3 = [
     ],
     price: '7.500.000',
     breed: 'large',
+    age: 10,
   },
   {
     img: dog1Img,
@@ -181,6 +183,7 @@ export const mock3 = [
       },
     ],
     price: '6.500.000',
+    age: 90,
   },
   {
     img: dog4Img,
@@ -211,6 +214,7 @@ export const mock3 = [
       },
     ],
     price: '6.950.000',
+    age: 1,
   },
   {
     img: dog3Img,
@@ -226,6 +230,7 @@ export const mock3 = [
       },
     ],
     price: '7.100.000',
+    age: 7,
   },
   {
     img: dog1Img,
