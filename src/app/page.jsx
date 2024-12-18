@@ -7,10 +7,14 @@ import Sellers from '@/components/Sellers';
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 const fetchPageData = async (type) => {
-  const res = await fetch(`${baseUrl}/api?type=${type}`);
-  if (!res.ok) throw new Error(`Failed to fetch data for page ${page}`);
-  const { data, total } = await res.json();
-  return { data, total };
+  try {
+    const res = await fetch(`${baseUrl}/api?type=${type}`);
+    if (!res.ok) throw new Error(`Failed to fetch data for type ${type}`);
+    const { data, total } = await res.json();
+    return { data, total };
+  } catch (err) {
+    return { data: [], total: 0 };
+  }
 };
 
 export default async function Home() {
