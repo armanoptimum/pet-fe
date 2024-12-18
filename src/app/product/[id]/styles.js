@@ -50,12 +50,12 @@ export const InformationBlockStyled = styled.div`
 
 export const InformationListStyled = styled.ul`
   display: flex;
-  gap: 15rem;
   border-bottom: 0.03rem solid var(--color-neutral-40);
   padding: 1rem;
 `;
 
 export const InformationItemStyled = styled.li`
+min-width: 20rem;
   color: var(--color-neutral-40);
   font-size: var(--font-size-body-medium);
 `;

@@ -17,7 +17,32 @@ import Button from '@/components/shared/Button';
 import { BUTTON_STYLES } from '@/components/shared/Button/constants';
 import chatIcon from '@/assets/icons/chatIcon.svg';
 
-const Product = () => {
+const sku = 'SKU #10000'
+const name = 'Shibu'
+const price = '34.000.000 VND'
+
+const info = {
+  sku: "1000000",
+  gender: 'female',
+  age: 20,
+  size: 'small',
+  color: 'red',
+  vaccinated: 'yes',
+  dewormed: 'yes',
+  cert: 'yes',
+  microchip: 'yes',
+  location: 'vietnam',
+  publish: '23-10-9',
+  addintional: `Pure breed Shih Tzu.
+  Good body structure.
+  With MKA cert and Microchip.
+  Father from champion lineage.`
+}
+
+const Product = async ({ params }) => {
+  const { id } = await params; 
+  console.log(id)
+
   return (
     <ProductStyled>
       <ImageWrapperStyled>
@@ -25,9 +50,9 @@ const Product = () => {
       </ImageWrapperStyled>
 
       <ContentWrapperStyled>
-        <SkuStyled>SKU #10000</SkuStyled>
-        <NameStyled>Shibu</NameStyled>
-        <PriceStyled>34.000.000 VND</PriceStyled>
+        <SkuStyled>{sku}</SkuStyled>
+        <NameStyled>{name}</NameStyled>
+        <PriceStyled>{price}</PriceStyled>
         <ButtonsWrapperStyled>
           <Button>Contact Us</Button>
           <Button style={BUTTON_STYLES.OUTLINE} icon={chatIcon}>
@@ -35,34 +60,12 @@ const Product = () => {
           </Button>
         </ButtonsWrapperStyled>
         <InformationBlockStyled>
-          <InformationListStyled>
-            <InformationItemStyled>Sku</InformationItemStyled>
-            <InformationItemStyled>100000</InformationItemStyled>
-          </InformationListStyled>
-          <InformationListStyled>
-            <InformationItemStyled>Sku</InformationItemStyled>
-            <InformationItemStyled>100000</InformationItemStyled>
-          </InformationListStyled>
-          <InformationListStyled>
-            <InformationItemStyled>Sku</InformationItemStyled>
-            <InformationItemStyled>100000</InformationItemStyled>
-          </InformationListStyled>
-          <InformationListStyled>
-            <InformationItemStyled>Sku</InformationItemStyled>
-            <InformationItemStyled>100000</InformationItemStyled>
-          </InformationListStyled>
-          <InformationListStyled>
-            <InformationItemStyled>Sku</InformationItemStyled>
-            <InformationItemStyled>100000</InformationItemStyled>
-          </InformationListStyled>
-          <InformationListStyled>
-            <InformationItemStyled>Sku</InformationItemStyled>
-            <InformationItemStyled>100000</InformationItemStyled>
-          </InformationListStyled>
-          <InformationListStyled>
-            <InformationItemStyled>Sku</InformationItemStyled>
-            <InformationItemStyled>100000</InformationItemStyled>
-          </InformationListStyled>
+          {Object.entries(info).map(([key, value]) => (
+            <InformationListStyled key={key}>
+              <InformationItemStyled>{key}</InformationItemStyled>
+              <InformationItemStyled>{value}</InformationItemStyled>
+            </InformationListStyled>
+          ))}
         </InformationBlockStyled>
       </ContentWrapperStyled>
     </ProductStyled>
