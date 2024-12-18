@@ -2,7 +2,7 @@ import { mock1 } from './db/mock1';
 import { mock2 } from './db/mock2';
 import { mock3 } from './db/mock3';
 import { mock4 } from './db/mock4';
-import { filterByAge, filterByBreed, filterByColor, filterByGender } from './utility';
+import { filterByPrice, filterByBreed, filterByColor, filterByGender } from './utility';
 
 export async function GET(request) {
   let data = [];
@@ -18,8 +18,8 @@ export async function GET(request) {
   const breeds = url.searchParams.getAll('breed').map((breed) => breed.toLowerCase());
   const genders = url.searchParams.getAll('gender').map((gender) => gender.toLowerCase());
 
-  const min = parseInt(url.searchParams.get('min'), 10) || null;
-  const max = parseInt(url.searchParams.get('max'), 10) || null;
+  const min = parseInt(url.searchParams.get('min'), 10) || 0;
+  const max = parseInt(url.searchParams.get('max'), 10) || Infinity;
 
   switch (type) {
     case 'mock1':
@@ -49,7 +49,7 @@ export async function GET(request) {
   data = filterByGender(data, genders);
   data = filterByColor(data, colors);
   data = filterByBreed(data, breeds);
-  data = filterByAge(data, min, max);
+  data = filterByPrice(data, min, max);
 
   const startIndex = (page - 1) * limit;
   const endIndex = startIndex + limit;

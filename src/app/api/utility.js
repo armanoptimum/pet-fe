@@ -21,14 +21,11 @@ export const filterByBreed = (data, breeds) => {
   return data;
 };
 
-export const filterByAge = (data, minAge, maxAge) => {
-  console.log(minAge, maxAge);
-  if (minAge !== null && maxAge !== null) {
-    data = data.filter((item) => item.age >= minAge && item.age <= maxAge);
-  } else if (minAge !== null) {
-    data = data.filter((item) => item.age >= minAge);
-  } else if (maxAge !== null) {
-    data = data.filter((item) => item.age <= maxAge);
-  }
+export const filterByPrice = (data, minPrice, maxPrice) => {
+  data = data.filter((item) => {
+    const price = +item.price.replace(/\./g, '');
+    return price >= minPrice && price <= maxPrice;
+  });
+
   return data;
 };
