@@ -38,9 +38,9 @@ const Product = async ({ params }) => {
       </ImagesWrapperStyled>
 
       <ContentWrapperStyled>
-        <SkuStyled>{data.info.sku}</SkuStyled>
+        <SkuStyled>{data.info.sku} SKU</SkuStyled>
         <NameStyled>{data.name}</NameStyled>
-        <PriceStyled>{data.price}</PriceStyled>
+        <PriceStyled>{data.price} VND</PriceStyled>
         <ButtonsWrapperStyled>
           <Button>Contact Us</Button>
           <Button style={BUTTON_STYLES.OUTLINE} icon={chatIcon}>
